@@ -1,0 +1,5 @@
+﻿  Homework1.cpp
+c:\users\lance\code\c2\homework1\homework1\homework1\homework1.cpp(40): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\lance\code\c2\homework1\homework1\homework1\homework1.cpp(40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\lance\code\c2\homework1\homework1\homework1\homework1.cpp(236): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Homework1.vcxproj -> C:\Users\lance\code\c2\Homework1\Homework1\Debug\Homework1.exe

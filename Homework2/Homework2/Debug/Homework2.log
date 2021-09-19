@@ -1,0 +1,4 @@
+﻿  Homework2.cpp
+c:\users\lance\code\c2\homework2\homework2\homework2.cpp(10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\lance\code\c2\homework2\homework2\homework2.cpp(29): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Homework2.vcxproj -> C:\Users\lance\code\c2\Homework2\Debug\Homework2.exe

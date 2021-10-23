@@ -1,0 +1,3 @@
+﻿  Homework7.cpp
+c:\users\lance\code\c2\homework7\homework5\homework7.cpp(21): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Homework5.vcxproj -> C:\Users\lance\code\c2\Homework7\Debug\Homework7.exe

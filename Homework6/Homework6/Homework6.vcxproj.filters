@@ -21,9 +21,15 @@
     <ClCompile Include="CDog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CTrainedDog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrainedDog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

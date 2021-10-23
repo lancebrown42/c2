@@ -28,9 +28,9 @@ protected:
 
 
 private:
-	char* m_pstrName;
-	int m_intAge;
-	float m_sngWeight;
+	char* m_pstrName = 0;
+	int m_intAge = 0;
+	float m_sngWeight = 0;
 
 
 	// --------------------------------------------------------------------------------
@@ -47,9 +47,12 @@ public:
 	// Weight
 	void SetWeight(float fltNewWeight);
 	const float GetWeight();
+	const void Bark();
+	const void Print();
 
 
 protected:
+	
 
 private:
 
@@ -67,8 +70,13 @@ public:
 	CDog(const char* pstrName);
 	CDog(const char* pstrName, int intAge);
 	CDog(const char* pstrName, int intAge, float sngWeight);
+
+	//Destructor
+	~CDog();
 protected:
 	void initialize(const char* pstrName, int intAge, float sngWeight);
+	void CleanUp();
+	void DeleteString(char* &strDeleteMe);
 
 
 };

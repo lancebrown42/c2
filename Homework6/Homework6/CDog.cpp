@@ -15,15 +15,20 @@
 // --------------------------------------------------------------------------------
 void CDog::SetName(const char* strNewName)
 {
-	char* buffer = new char[];
-	if (strlen(strNewName) >= 49) {
-		char* buffer = new char[49];
+	int intLength = 0;
+	int intIndex = 0;
+	intLength = strlen(strNewName);
+	
+	if (intLength > 49) {
+		intLength = 49;
 	}
-	else {
-		char* buffer = new char[strlen(strNewName)];
+	DeleteString(m_pstrName);
+	m_pstrName = new char[intLength + 1];
+	for (int i = 0; i < intLength; i++) {
+		*(m_pstrName + i) = *(strNewName + i);
 	}
-	strcpy(buffer, strNewName);
-	strcpy(m_pstrName, buffer);
+	*(m_pstrName + intLength) = 0;
+	
 
 }
 
@@ -87,6 +92,26 @@ const float CDog::GetWeight()
 	return m_sngWeight;
 }
 
+// --------------------------------------------------------------------------------
+// Name: Bark
+// Abstract: Prints bark type
+// --------------------------------------------------------------------------------
+const void CDog::Bark() {
+	if (GetWeight() < 15.0f) {
+		printf("Yip, yip, yip\n");
+	}
+	else {
+		printf("Woof, woof\n");
+	}
+}
+// --------------------------------------------------------------------------------
+// Name: Print
+// Abstract: Prints everything
+// --------------------------------------------------------------------------------
+const void CDog::Print() {
+	printf("Name: %s\nAge: %d\nWeight: %f\nBark: ", GetName(), GetAge(), GetWeight());
+	Bark();
+}
 //Default Constructor
 CDog::CDog() {
 	initialize("", 0, 0);
@@ -94,14 +119,14 @@ CDog::CDog() {
 
 //Parameterized constructors
 CDog::CDog(const char* pstrName) {
-	initialize(m_pstrName, 0, 0);
+	initialize(pstrName, 0, 0);
 
 }
 CDog::CDog(const char* pstrName, int intAge) {
-	initialize(m_pstrName, m_intAge, 0);
+	initialize(pstrName, intAge, 0);
 }
 CDog::CDog(const char* pstrName, int intAge, float sngWeight) {
-	initialize(m_pstrName, m_intAge, m_sngWeight);
+	initialize(pstrName, intAge, sngWeight);
 }
 
 //initialization
@@ -110,6 +135,21 @@ void CDog::initialize(const char* pstrName, int intAge, float sngWeight) {
 	SetAge(intAge);
 	SetWeight(sngWeight);
 
+}
+//Destructor
+CDog::~CDog(){
+	CleanUp();
+}
+//clear memory
+void CDog::CleanUp() {
+	DeleteString(m_pstrName);
+}
+//Delete String
+void CDog::DeleteString(char* &strDeleteMe) {
+	if (strDeleteMe != 0) {
+		delete[] strDeleteMe;
+		strDeleteMe = 0;
+	}
 }
 
 

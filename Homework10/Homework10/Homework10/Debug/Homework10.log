@@ -1,3 +1,7 @@
-﻿  Homework10.cpp
-c:\users\lance\code\c2\homework10\homework10\homework10\homework10.cpp(33): warning C4326: return type of 'main' should be 'int' instead of 'void'
+﻿  CNode.cpp
+  CQueue.cpp
+  CStack.cpp
+  Homework10.cpp
+c:\users\lance\code\c2\homework10\homework10\homework10\homework10.cpp(43): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
   Homework10.vcxproj -> C:\Users\lance\code\c2\Homework10\Homework10\Debug\Homework10.exe

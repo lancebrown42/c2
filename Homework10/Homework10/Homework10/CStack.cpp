@@ -9,6 +9,10 @@
 #include "CStack.h"
 #include "CNode.h"
 
+//------------------------------------------------------------------------
+// Name: CStack
+// Abstract: Constructors
+//------------------------------------------------------------------------
 CStack::CStack()
 {
 	Initialize();
@@ -24,6 +28,10 @@ CStack::~CStack()
 {
 	CleanUp();
 }
+//------------------------------------------------------------------------
+// Name: operator=
+// Abstract: Assignment override
+//------------------------------------------------------------------------
 
 void CStack::operator=(const CStack & clsOriginal)
 {
@@ -32,6 +40,10 @@ void CStack::operator=(const CStack & clsOriginal)
 		DeepCopy(clsOriginal);
 	}
 }
+//------------------------------------------------------------------------
+// Name: Push
+// Abstract: Adds  value to front of stack
+//------------------------------------------------------------------------
 
 void CStack::Push(int intValue)
 {
@@ -39,7 +51,10 @@ void CStack::Push(int intValue)
 	clsNewNode = new CNode(intValue, m_pclsHeadNode);
 	m_pclsHeadNode = clsNewNode;
 }
-
+//------------------------------------------------------------------------
+// Name: Pop
+// Abstract: Removes value from front of stack
+//------------------------------------------------------------------------
 int CStack::Pop()
 {
 	int intValue = 0;
@@ -54,7 +69,10 @@ int CStack::Pop()
 
 	return intValue;
 }
-
+//------------------------------------------------------------------------
+// Name: IsEmpty
+// Abstract: Checks if stack is empty
+//------------------------------------------------------------------------
 bool CStack::IsEmpty() const
 {
 	bool blnEmpty = false;
@@ -63,10 +81,18 @@ bool CStack::IsEmpty() const
 	}
 	return blnEmpty;
 }
+//------------------------------------------------------------------------
+// Name: Print
+// Abstract: Prints without message
+//------------------------------------------------------------------------
 void CStack::Print() const {
 	
 	Print("");
 }
+//------------------------------------------------------------------------
+// Name: Print
+// Abstract: Prints stack with message header
+//------------------------------------------------------------------------
 void CStack::Print(const char* strMessage) const
 {
 	int intIndex = 0;
@@ -86,27 +112,49 @@ void CStack::Print(const char* strMessage) const
 		}
 	}
 	else {
+		cout << "**************************" << endl;
+		cout << strMessage << endl;
+		cout << "**************************" << endl;
 		cout << "Nothing to see here" << endl;
 	}
 	
 }
-
+//------------------------------------------------------------------------
+// Name: Initialize
+// Abstract: Initialize
+//------------------------------------------------------------------------
 void CStack::Initialize()
 {
 	m_pclsHeadNode = 0;
 }
-
+//------------------------------------------------------------------------
+// Name: DeepCopy
+// Abstract: Copies stack by reference
+//------------------------------------------------------------------------
 void CStack::DeepCopy(const CStack & clsOriginal)
 {
-	CNode* clsCurrentNode = clsOriginal.m_pclsHeadNode;
+	CNode* pclsOriginal = 0;
+	int intValue = 0;
+	CNode* pclsTail = 0;
+	pclsOriginal = clsOriginal.m_pclsHeadNode;
 
-	while (clsCurrentNode != nullptr && clsCurrentNode != 0) {
-		Push(clsCurrentNode->GetValue());
-		clsCurrentNode = clsCurrentNode->GetNextNode();
+	while (pclsOriginal != 0) {
+		intValue = pclsOriginal->GetValue();
+		if (pclsTail == 0) {
+			pclsTail = new CNode(intValue, 0);
+			m_pclsHeadNode = pclsTail;
+		}
+		else {
+			pclsTail->SetNextNode(new CNode(intValue, 0));
+			pclsTail = pclsTail->GetNextNode();
+		}
+		pclsOriginal = pclsOriginal->GetNextNode();
 	}
-	
 }
-
+//------------------------------------------------------------------------
+// Name: CleanUp
+// Abstract: Clears stack
+//------------------------------------------------------------------------
 void CStack::CleanUp()
 {
 	while (IsEmpty() == false) {

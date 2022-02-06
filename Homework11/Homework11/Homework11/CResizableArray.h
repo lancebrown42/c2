@@ -63,10 +63,10 @@ public:
 	long GetSize();
 
 	// Bracket operator overload
-	GenericDataType &operator [](long i) const {
+	GenericDataType &operator [](long i)  {
 		return (GenericDataType) *(m_palngValues + i);
 	}
-	const GenericDataType & operator [](long i) {
+	const GenericDataType & operator [](long i) const {
 		return (GenericDataType) *(m_palngValues + i);
 	}
 
@@ -84,7 +84,7 @@ public:
 
 	//Display
 	void Print();
-	void Print(GenericDataType* pstrMessage);
+	void Print(const char* pstrMessage) const;
 
 
 protected:

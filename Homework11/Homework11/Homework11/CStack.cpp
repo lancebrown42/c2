@@ -8,22 +8,27 @@
 // --------------------------------------------------------------------------------
 #include "CStack.h"
 #include "CNode.h"
-
+// --------------------------------------------------------------------------------
+// Pre-compiler Directives
+// --------------------------------------------------------------------------------
+#ifndef CSTACK_CPP
+#define CSTACK_CPP
 //------------------------------------------------------------------------
 // Name: CStack
 // Abstract: Constructors
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 CStack::CStack()
 {
 	Initialize();
 }
-
+template <typename GenericDataType>
 CStack::CStack(const CStack & clsOriginal)
 {
 	Initialize();
 	*this = clsOriginal;
 }
-
+template <typename GenericDataType>
 CStack::~CStack()
 {
 	CleanUp();
@@ -32,7 +37,7 @@ CStack::~CStack()
 // Name: operator=
 // Abstract: Assignment override
 //------------------------------------------------------------------------
-
+template <typename GenericDataType>
 void CStack::operator=(const CStack & clsOriginal)
 {
 	if (this != &clsOriginal) {
@@ -44,7 +49,7 @@ void CStack::operator=(const CStack & clsOriginal)
 // Name: Push
 // Abstract: Adds  value to front of stack
 //------------------------------------------------------------------------
-
+template <typename GenericDataType>
 void CStack::Push(int intValue)
 {
 	CNode* clsNewNode = 0;
@@ -55,6 +60,7 @@ void CStack::Push(int intValue)
 // Name: Pop
 // Abstract: Removes value from front of stack
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 int CStack::Pop()
 {
 	int intValue = 0;
@@ -73,6 +79,7 @@ int CStack::Pop()
 // Name: IsEmpty
 // Abstract: Checks if stack is empty
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 bool CStack::IsEmpty() const
 {
 	bool blnEmpty = false;
@@ -85,6 +92,7 @@ bool CStack::IsEmpty() const
 // Name: Print
 // Abstract: Prints without message
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 void CStack::Print() const {
 
 	Print("");
@@ -93,6 +101,7 @@ void CStack::Print() const {
 // Name: Print
 // Abstract: Prints stack with message header
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 void CStack::Print(const char* strMessage) const
 {
 	int intIndex = 0;
@@ -123,6 +132,7 @@ void CStack::Print(const char* strMessage) const
 // Name: Initialize
 // Abstract: Initialize
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 void CStack::Initialize()
 {
 	m_pclsHeadNode = 0;
@@ -131,6 +141,7 @@ void CStack::Initialize()
 // Name: DeepCopy
 // Abstract: Copies stack by reference
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 void CStack::DeepCopy(const CStack & clsOriginal)
 {
 	CNode* pclsOriginal = 0;
@@ -155,9 +166,11 @@ void CStack::DeepCopy(const CStack & clsOriginal)
 // Name: CleanUp
 // Abstract: Clears stack
 //------------------------------------------------------------------------
+template <typename GenericDataType>
 void CStack::CleanUp()
 {
 	while (IsEmpty() == false) {
 		Pop();
 	}
 }
+#endif

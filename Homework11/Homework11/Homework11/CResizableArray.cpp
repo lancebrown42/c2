@@ -4,15 +4,15 @@
 // --------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------
-// Includes
-// --------------------------------------------------------------------------------
-#include "CResizableArray.h"
-using namespace std;
-// --------------------------------------------------------------------------------
 // Pre-compiler Directives
 // --------------------------------------------------------------------------------
 #ifndef CRESIZABLE_ARRAY_CPP
 #define CRESIZABLE_ARRAY_CPP
+// --------------------------------------------------------------------------------
+// Includes
+// --------------------------------------------------------------------------------
+#include "CResizableArray.h"
+using namespace std;
 // --------------------------------------------------------------------------------
 // Name: Constructors
 // Abstract: Constructors
@@ -66,7 +66,7 @@ void CResizableArray<GenericDataType>::Initialize(long lngInitialSize, GenericDa
 // Abstract: Prints array contents with default header
 // --------------------------------------------------------------------------------
 template <typename GenericDataType>
-void CResizableArray<GenericDataType>::Print() {
+void CResizableArray::Print() {
 	if (m_lngArraySize > 0) {
 		Print((char*) "Array");
 
@@ -77,7 +77,7 @@ void CResizableArray<GenericDataType>::Print() {
 // Abstract: Prints array contents with parameterized header
 // --------------------------------------------------------------------------------
 template <typename GenericDataType>
-void CResizableArray<GenericDataType>::Print(GenericDataType* pstrMessage) {
+void CResizableArray::Print(const char* pstrMessage) {
 	printf("----------%s---------\n", pstrMessage);
 	if (m_lngArraySize > 0) {
 

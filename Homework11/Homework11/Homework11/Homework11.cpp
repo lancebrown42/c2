@@ -112,12 +112,8 @@ void ResizableArrayTestsChar()
 	// #7 - Parameterized Constructor #2 - Size, Default Value
 	CResizableArray<char> clsValues4(3, 'Y');
 	clsValues4.Print("#7 - Parameterized Constructor #2 - Size:3, Default Value: Y");
-	// #8 - Plus Equal
-	clsValues3 += clsValues4;
-	clsValues3.Print("#8 - Plus Equal: '0, 0' + 'Y, Y, Y'");
-	// #9 - Plus with assign to self
-	clsValues3 = clsValues3 + clsValues3;
-	clsValues3.Print("#9 - Plus with assign to self: '0, 0, Y, Y, Y' + '0, 0, Y, Y, Y'");	// #10 - SetValueAt
+	
+	// #10 - SetValueAt
 	clsValues1.SetValueAt('z', -1);
 	clsValues1.SetValueAt('Z', 5);
 	clsValues1.Print("#10 - SetValueAt");
@@ -289,7 +285,8 @@ void ResizableArrayTestsLong()
 void ResizableArrayPassByReferenceLong(CResizableArray<long> &clsValues)
 {
 	clsValues.Print("#16b - Pass By Reference - During");
-}// --------------------------------------------------------------------------------
+}
+// --------------------------------------------------------------------------------
 // Name: ResizableArrayPassByValueLong
 // Abstract: Pass by value
 // --------------------------------------------------------------------------------
@@ -374,7 +371,8 @@ void ResizableArrayTestsDouble()
 	clsValues1.Print("#14c - InsertValueAt: 100.1, 50");
 	// #15 - RemoveAt
 	clsValues3 = clsValues1;
-	clsValues3.RemoveAt(-1);	clsValues3.Print("#15a - RemoveAt: -1");
+	clsValues3.RemoveAt(-1);
+	clsValues3.Print("#15a - RemoveAt: -1");
 	clsValues3.RemoveAt(10);
 	clsValues3.Print("#15b - RemoveAt: 10");
 	clsValues3.RemoveAt(2);
@@ -849,7 +847,8 @@ void QueueTestsDouble()
 void QueuePassByReferenceDouble(CQueue<double> &clsValues)
 {
 	clsValues.Print("#6b - Pass By Reference - During");
-}// --------------------------------------------------------------------------------
+}
+// --------------------------------------------------------------------------------
 // Name: QueuePassByValueDouble
 // Abstract: Pass by value
 // --------------------------------------------------------------------------------

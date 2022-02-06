@@ -1,366 +1,368 @@
-﻿  CResizableArray.cpp
+﻿  CNode.cpp
+  CQueue.cpp
+  CStack.cpp
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): error C2244: 'CStack::CStack': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(21): note: see declaration of 'CStack::CStack'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): note: 'CStack::CStack(void)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): note: 'CStack::CStack(const CStack &)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(22): note: 'CStack::CStack(void)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): error C2244: 'CStack::CStack': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(26): note: see declaration of 'CStack::CStack'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): note: 'CStack::CStack(const CStack &)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): note: 'CStack::CStack(const CStack &)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(27): note: 'CStack::CStack(void)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(33): error C2244: 'CStack::~CStack': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(32): note: see declaration of 'CStack::~CStack'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(33): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(33): note: 'CStack::~CStack(void)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(33): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(33): note: 'CStack::~CStack(void)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(42): error C2244: 'CStack::operator =': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(41): note: see declaration of 'CStack::operator ='
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(42): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(42): note: 'void CStack::operator =(const CStack &)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(42): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(42): note: 'void CStack::operator =(const CStack &)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(54): error C2244: 'CStack::Push': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(53): note: see declaration of 'CStack::Push'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(54): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(54): note: 'void CStack::Push(int)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(54): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(54): note: 'void CStack::Push(int)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(65): error C2244: 'CStack::Pop': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(64): note: see declaration of 'CStack::Pop'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(65): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(65): note: 'int CStack::Pop(void)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(65): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(65): note: 'int CStack::Pop(void)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(84): error C2244: 'CStack::IsEmpty': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(83): note: see declaration of 'CStack::IsEmpty'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(84): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(84): note: 'bool CStack::IsEmpty(void) const'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(84): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(84): note: 'bool CStack::IsEmpty(void) const'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): error C2244: 'CStack::Print': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: see declaration of 'CStack::Print'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: 'void CStack::Print(void) const'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: 'void CStack::Print(const char *) const'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(96): note: 'void CStack::Print(void) const'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): error C2244: 'CStack::Print': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(105): note: see declaration of 'CStack::Print'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): note: 'void CStack::Print(const char *) const'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): note: 'void CStack::Print(const char *) const'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(106): note: 'void CStack::Print(void) const'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(137): error C2244: 'CStack::Initialize': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(136): note: see declaration of 'CStack::Initialize'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(137): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(137): note: 'void CStack::Initialize(void)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(137): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(137): note: 'void CStack::Initialize(void)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(146): error C2244: 'CStack::DeepCopy': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(145): note: see declaration of 'CStack::DeepCopy'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(146): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(146): note: 'void CStack::DeepCopy(const CStack &)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(146): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(146): note: 'void CStack::DeepCopy(const CStack &)'
+c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(171): error C2244: 'CStack::CleanUp': unable to match function definition to an existing declaration
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(170): note: see declaration of 'CStack::CleanUp'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(171): note: definition
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(171): note: 'void CStack::CleanUp(void)'
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(171): note: existing declarations
+  c:\users\lance\code\c2\homework11\homework11\homework11\cstack.cpp(171): note: 'void CStack::CleanUp(void)'
   Homework11.cpp
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(31): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(31): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(31): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(31): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(32): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(32): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(32): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(32): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(35): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(35): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(35): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(35): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(36): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(36): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(36): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(36): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(38): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(38): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(38): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(38): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(39): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(39): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(39): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(39): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(43): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(43): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(43): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(43): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(44): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(44): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(44): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(44): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(46): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(46): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(46): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(46): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(47): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(47): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(47): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(47): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(49): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(49): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(49): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(49): error C2059: syntax error: ')'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(50): error C2143: syntax error: missing ')' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(50): error C2143: syntax error: missing ';' before '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(50): error C2059: syntax error: '<'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(50): error C2059: syntax error: ')'
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(56): warning C4326: return type of 'main' should be 'int' instead of 'void'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(199): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [25]' to 'GenericDataType *'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(84): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [25]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(84): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(87): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(87): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(90): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [24]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(90): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(94): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(95): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(96): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(97): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(98): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(99): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(100): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [38]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(100): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(106): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [74]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(106): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(108): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(108): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(111): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [43]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(111): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(114): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [61]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(114): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(116): error C2676: binary '+=': 'CResizableArray<char>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(117): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [36]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(117): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(119): error C2676: binary '+': 'CResizableArray<char>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(120): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [65]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(120): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(124): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [17]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(124): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(134): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [27]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(134): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(137): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(137): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(140): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(140): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(142): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [27]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(142): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(144): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(144): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(148): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(148): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(150): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(150): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(152): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(152): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(159): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [23]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(159): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(161): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(161): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(163): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [33]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(163): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(165): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(165): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(167): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [29]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(167): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(176): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(176): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(184): error C2664: 'void CResizableArray<char>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
+          with
+          [
+              GenericDataType=char
+          ]
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(184): note: Conversion from string literal loses const qualifier (see /Zc:strictStrings)
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(200): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [25]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(199): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(202): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(200): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(203): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(202): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(205): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [23]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(203): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(206): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [23]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(205): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(209): error C3892: 'clsValues1': you cannot assign to a variable that is const
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(206): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(210): error C3892: 'clsValues1': you cannot assign to a variable that is const
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(211): error C3892: 'clsValues1': you cannot assign to a variable that is const
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(212): error C3892: 'clsValues1': you cannot assign to a variable that is const
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(213): error C3892: 'clsValues1': you cannot assign to a variable that is const
 c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(214): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(215): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [38]' to 'GenericDataType *'
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(215): error C3892: 'clsValues1': you cannot assign to a variable that is const
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(216): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [38]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(215): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(221): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [74]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(216): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(222): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [74]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(221): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(223): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(222): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(224): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(223): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(226): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [43]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(224): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(227): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [43]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(226): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(229): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [61]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(227): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(230): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [61]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(229): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(231): error C2676: binary '+=': 'CResizableArray<long>' does not define this operator or a conversion to a type acceptable to the predefined operator
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(232): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [36]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(230): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(232): error C2676: binary '+=': 'CResizableArray<long>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(233): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [36]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(232): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(234): error C2676: binary '+': 'CResizableArray<long>' does not define this operator or a conversion to a type acceptable to the predefined operator
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(235): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [65]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(233): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(235): error C2676: binary '+': 'CResizableArray<long>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(236): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [65]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(235): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(239): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [17]' to 'GenericDataType *'
+  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(236): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(240): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [17]' to 'GenericDataType *'
           with
           [
               GenericDataType=long
           ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(239): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(249): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [27]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(249): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(252): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(252): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(255): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(255): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(257): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [27]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(257): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(259): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(259): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(263): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(263): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(265): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(265): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(267): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(267): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(274): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [23]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(274): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(276): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(276): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(278): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [33]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(278): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(280): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(280): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(282): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [29]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(282): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(291): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(291): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(298): error C2664: 'void CResizableArray<long>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=long
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(298): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(314): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [25]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(314): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(317): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(317): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(320): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [25]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(320): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(324): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(325): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(326): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(327): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(328): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(329): error C3892: 'clsValues1': you cannot assign to a variable that is const
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(330): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [38]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(330): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(336): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [74]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(336): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(338): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(338): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(341): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [43]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(341): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(344): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [61]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(344): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(346): error C2676: binary '+=': 'CResizableArray<double>' does not define this operator or a conversion to a type acceptable to the predefined operator
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(347): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [42]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(347): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(349): error C2676: binary '+': 'CResizableArray<double>' does not define this operator or a conversion to a type acceptable to the predefined operator
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(350): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [77]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(350): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(354): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [17]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(354): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(364): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [27]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(364): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(367): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [26]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(367): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(370): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [32]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(370): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(372): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [29]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(372): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(374): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [32]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(374): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(377): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(377): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(379): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [20]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(379): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(381): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [19]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(381): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(388): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [23]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(388): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(390): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(390): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(392): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [33]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(392): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(394): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(394): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(396): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [29]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(396): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(405): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [34]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(405): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(413): error C2664: 'void CResizableArray<double>::Print(GenericDataType *)': cannot convert argument 1 from 'const char [30]' to 'GenericDataType *'
-          with
-          [
-              GenericDataType=double
-          ]
-  c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(413): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(422): error C3861: 'StackTestsChar': identifier not found
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(423): error C3861: 'StackTestsLong': identifier not found
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(424): error C3861: 'StackTestsDouble': identifier not found
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(438): error C2059: syntax error: '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(439): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(441): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(442): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(443): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(444): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(449): error C2059: syntax error: '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(450): error C2065: 'clsValues2': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(452): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(454): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(458): error C2059: syntax error: '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(461): error C2065: 'clsValues3': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(462): error C2065: 'clsValues3': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(463): error C2065: 'clsValues3': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(464): error C2065: 'clsValues3': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(467): error C2065: 'clsValues3': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(471): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(472): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(472): error C3861: 'StackPassByReferenceChar': identifier not found
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(473): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(475): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(476): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(476): error C3861: 'StackPassByValueChar': identifier not found
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(477): error C2065: 'clsValues1': undeclared identifier
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(484): error C2143: syntax error: missing ')' before '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(484): error C2143: syntax error: missing ';' before '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(484): error C2059: syntax error: '<'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(484): error C2059: syntax error: ')'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(485): error C2143: syntax error: missing ';' before '{'
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(485): error C2447: '{': missing function header (old-style formal list?)
-c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(485): fatal error C1003: error count exceeds 100; stopping compilation
+c:\users\lance\code\c2\homework11\homework11\homework11\homework11.cpp(240): fatal error C1003: error count exceeds 100; stopping compilation
   Generating Code...

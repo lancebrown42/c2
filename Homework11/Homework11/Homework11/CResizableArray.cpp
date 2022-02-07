@@ -47,7 +47,7 @@ CResizableArray<GenericDataType>::~CResizableArray() {
 // --------------------------------------------------------------------------------
 template <typename GenericDataType>
 void CResizableArray<GenericDataType>::CleanUp() {
-	SetSize(0, 0);
+	Initialize(0, 0);
 }
 
 // --------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ void CResizableArray<GenericDataType>::Initialize(long lngInitialSize, GenericDa
 // Abstract: Prints array contents with default header
 // --------------------------------------------------------------------------------
 template <typename GenericDataType>
-void CResizableArray::Print() {
+void CResizableArray<GenericDataType>::Print() {
 	if (m_lngArraySize > 0) {
 		Print((char*) "Array");
 
@@ -77,7 +77,7 @@ void CResizableArray::Print() {
 // Abstract: Prints array contents with parameterized header
 // --------------------------------------------------------------------------------
 template <typename GenericDataType>
-void CResizableArray::Print(const char* pstrMessage) {
+void CResizableArray<GenericDataType>::Print(const char* pstrMessage) {
 	printf("----------%s---------\n", pstrMessage);
 	if (m_lngArraySize > 0) {
 
@@ -199,7 +199,7 @@ void CResizableArray<GenericDataType>::AddValueToFront(GenericDataType lngValue)
 	for (long i = 0; i < GetSize(); i++) {
 		*(palngNewVals + i + 1) = GetValueAt(i);
 	}
-	delete[] m_palngValues;
+	/*delete[] m_palngValues;*/
 	m_palngValues = 0;
 
 	m_palngValues = palngNewVals;
@@ -280,6 +280,6 @@ void CResizableArray<GenericDataType>::RemoveAt(long lngIndex) {
 	m_palngValues = 0;
 
 	m_palngValues = palngNewVals;
-	m_lngArraySize--;
+	m_lngArraySize-=1;
 }
 #endif

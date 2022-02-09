@@ -42,7 +42,7 @@ CSuperString::CSuperString(const double dblDoubleToCopy)
 CSuperString::CSuperString(const CSuperString & ssStringToCopy)
 {
 }
-CSuperString::CSuperString Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, const CSuperString & ssStringToCopy){
+CSuperString CSuperString::Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, const CSuperString & ssStringToCopy){
 	return new CSuperString();
 }
 CSuperString::~CSuperString() {

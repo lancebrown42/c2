@@ -4,31 +4,37 @@
 
 CSuperString::CSuperString()
 {
-	Initialize("", false, '', 0,0,0,0f, 0, new CSuperString())
+	Initialize("", false, '\0', 0,0,0,0, 0, const new char)
 }
 
 CSuperString::CSuperString(const char * pstrStringToCopy)
 {
+	Initialize(pstrStringToCopy, false, '\0', 0,0,0,0, 0, new char)
 }
 
 CSuperString::CSuperString(const bool blnBooleanToCopy)
 {
+	Initialize("", blnBooleanToCopy, '\0', 0,0,0,0, 0, new char)
 }
 
 CSuperString::CSuperString(const char chrLetterToCopy)
 {
+	Initialize("", false, chrLetterToCopy, 0,0,0,0, 0, new char)
 }
 
 CSuperString::CSuperString(const short shtShortToCopy)
 {
+	Initialize("", false, '\0', shtShortToCopy,0,0,0, 0, new char)
 }
 
 CSuperString::CSuperString(const int intIntegerToCopy)
 {
+	Initialize("", false, '\0', 0,intIntegerToCopy,0,0, 0, new char)
 }
 
 CSuperString::CSuperString(const long lngLongToCopy)
 {
+	Initialize("", false, '\0', 0,0,lngLongToCopy,0, 0, new char)
 }
 
 CSuperString::CSuperString(const float sngFloatToCopy)
@@ -42,7 +48,7 @@ CSuperString::CSuperString(const double dblDoubleToCopy)
 CSuperString::CSuperString(const CSuperString & ssStringToCopy)
 {
 }
-CSuperString::CSuperString Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, const CSuperString & ssStringToCopy){
+CSuperString CSuperString::Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, char* & ssStringToCopy){
 	return new CSuperString();
 }
 CSuperString::~CSuperString() {
@@ -256,7 +262,7 @@ char* CSuperString::CloneString(const char* pstrSource) {
 	if (pstrSource != 0) {
 		lngLength = strlen(pstrSource);
 		pstrClone = new char[lngLength + 1];
-		strcpy_s(pstrClone, lngLength + 1, pstrSource);
+		strcpy(pstrClone, lngLength + 1, pstrSource);
 	}
 	else
 	{

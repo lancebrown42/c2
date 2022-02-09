@@ -37,7 +37,7 @@ public:
 				const long lngLongToCopy,
 				const float sngFloatToCopy,
 				const double dblDoubleToCopy,
-				const CSuperString & ssStringToCopy);
+				char* & ssStringToCopy);
 
 	// Destructor
 	virtual ~CSuperString();

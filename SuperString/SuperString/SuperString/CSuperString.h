@@ -29,6 +29,15 @@ public:
 	CSuperString(const float sngFloatToCopy);
 	CSuperString(const double dblDoubleToCopy);
 	CSuperString(const CSuperString &ssStringToCopy);
+	CSuperString Initialize(const char * pstrStringToCopy,
+				const bool blnBooleanToCopy,
+				const char chrLetterToCopy,
+				const short shtShortToCopy,
+				const int intIntegerToCopy,
+				const long lngLongToCopy,
+				const float sngFloatToCopy,
+				const double dblDoubleToCopy,
+				const CSuperString & ssStringToCopy);
 
 	// Destructor
 	virtual ~CSuperString();
@@ -101,7 +110,7 @@ public:
 	friend ostream& operator << (ostream &osOut, const CSuperString &ssOutput);
 	friend istream& operator >> (istream &isIn, CSuperString &ssInput);
 
-	// Don’t forget the comparison operators!!!
+	// Donï¿½t forget the comparison operators!!!
 
 
 

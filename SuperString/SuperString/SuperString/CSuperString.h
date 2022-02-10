@@ -29,7 +29,7 @@ public:
 	CSuperString(const float sngFloatToCopy);
 	CSuperString(const double dblDoubleToCopy);
 	CSuperString(const CSuperString &ssStringToCopy);
-	CSuperString Initialize(const char * pstrStringToCopy,
+	void Initialize(const char * pstrStringToCopy,
 				const bool blnBooleanToCopy,
 				const char chrLetterToCopy,
 				const short shtShortToCopy,

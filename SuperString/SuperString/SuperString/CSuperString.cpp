@@ -1,55 +1,91 @@
 #include "CSuperString.h"
 #include <string.h>
+#include <sstream>
+
 
 
 CSuperString::CSuperString()
 {
-	Initialize("", false, '\0', 0,0,0,0, 0, const new char)
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', NULL,NULL,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const char * pstrStringToCopy)
 {
-	Initialize(pstrStringToCopy, false, '\0', 0,0,0,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize(pstrStringToCopy, NULL, '0', NULL,NULL,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const bool blnBooleanToCopy)
 {
-	Initialize("", blnBooleanToCopy, '\0', 0,0,0,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize("", blnBooleanToCopy, '0', NULL,NULL,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const char chrLetterToCopy)
 {
-	Initialize("", false, chrLetterToCopy, 0,0,0,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize("", NULL, chrLetterToCopy, NULL,NULL,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const short shtShortToCopy)
 {
-	Initialize("", false, '\0', shtShortToCopy,0,0,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', shtShortToCopy,NULL,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const int intIntegerToCopy)
 {
-	Initialize("", false, '\0', 0,intIntegerToCopy,0,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', NULL,intIntegerToCopy,NULL,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const long lngLongToCopy)
 {
-	Initialize("", false, '\0', 0,0,lngLongToCopy,0, 0, new char)
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', NULL,NULL,lngLongToCopy,NULL, NULL, ssStringToCopy);
 }
 
 CSuperString::CSuperString(const float sngFloatToCopy)
 {
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', NULL,NULL,NULL,sngFloatToCopy, NULL, ssStringToCopy);
+
 }
 
 CSuperString::CSuperString(const double dblDoubleToCopy)
 {
+	char* ssStringToCopy;
+	Initialize("", NULL, '0', NULL,NULL,NULL,NULL, dblDoubleToCopy, ssStringToCopy);
+
 }
 
 CSuperString::CSuperString(const CSuperString & ssStringToCopy)
 {
+	char* sstring = ssStringToCopy.m_pstrSuperString;
+		Initialize("", NULL, '0', NULL,NULL,NULL,NULL, NULL, sstring);
 }
-CSuperString CSuperString::Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, char* & ssStringToCopy){
-	return new CSuperString();
+void CSuperString::Initialize(const char * pstrStringToCopy, const bool blnBooleanToCopy, const char chrLetterToCopy, const short shtShortToCopy, const int intIntegerToCopy, const long lngLongToCopy, const float sngFloatToCopy, const double dblDoubleToCopy, char* & ssStringToCopy){
+	char const* strValue;
+	if(pstrStringToCopy != ""){
+		strValue = (char*) pstrStringToCopy;
+	}
+	else if(blnBooleanToCopy != NULL){
+		if(blnBooleanToCopy == true){
+			strValue = "true";
+		}
+		else{
+			strValue = "false";
+		}
+	}else if(chrLetterToCopy != '0'){
+		strValue = (char*) &chrLetterToCopy;
+	}else if(shtShortToCopy != NULL){
+		stringstream ss;
+		ss<<shtShortToCopy;
+		strValue = ss.c_str();
+	}
+	
+	this->m_pstrSuperString = (char*) strValue;
 }
 CSuperString::~CSuperString() {
 	CleanUp();
@@ -246,13 +282,13 @@ CSuperString operator+(const CSuperString & ssLeftString, const char * pstrRight
 
 ostream & operator<<(ostream & osOut, const CSuperString & ssOutput)
 {
-
-
+	return osOut << ssOutput.m_pstrSuperString;
 }
 
 istream & operator>>(istream & isIn, CSuperString & ssInput)
 {
-
+	isIn >> ssInput.m_pstrSuperString;
+	return isIn;
 }
 
 char* CSuperString::CloneString(const char* pstrSource) {

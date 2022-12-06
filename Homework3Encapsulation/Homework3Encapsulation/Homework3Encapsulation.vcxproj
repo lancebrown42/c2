@@ -153,9 +153,11 @@
   <ItemGroup>
     <ClCompile Include="CDog.cpp" />
     <ClCompile Include="Homework3Encapsulation.cpp" />
+    <ClCompile Include="CTrainedDog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDog.h" />
+    <ClInclude Include="CTrainedDog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

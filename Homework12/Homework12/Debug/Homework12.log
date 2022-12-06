@@ -1,3 +1,5 @@
 ﻿  Homework12.cpp
-c:\users\lance\code\c2\homework12\homework12\homework12.cpp(17): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\lance\code\c2\homework12\homework12\homework12.cpp(44): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type '__int64'
+  c:\users\lance\code\c2\homework12\homework12\homework12.cpp(44): note: consider using '%lld' in the format string
+  c:\users\lance\code\c2\homework12\homework12\homework12.cpp(44): note: consider using '%I64d' in the format string
   Homework12.vcxproj -> C:\Users\lance\code\c2\Homework12\Debug\Homework12.exe

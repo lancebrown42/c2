@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------
-// Name: CClassName
-// Abstract: Class method definitions
+// Name: CDog
+// Abstract: Defines a dog with weight and name properties and bark method
 // --------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------
@@ -10,38 +10,68 @@
 
 
 // --------------------------------------------------------------------------------
-// Name: SetValue
-// Abstract: Set the value
+// Name: SetWeight
+// Abstract: Set the weight
 // --------------------------------------------------------------------------------
-void CDog::SetValue(int intNewValue)
+void CDog::SetWeight(float sngWeight)
 {
 	// Boundary check
-	if (intNewValue < 0)
+	if (sngWeight < 0)
 	{
 		// Clip to prevent negative value
-		intNewValue = 0;
+		sngWeight = 0;
 	}
 
-	m_intValue = intNewValue;
+	m_sngWeight = sngWeight;
 }
 
 
 // --------------------------------------------------------------------------------
-// Name: GetValue
-// Abstract: Get the Value
+// Name: GetWeight
+// Abstract: Get the weight
 // --------------------------------------------------------------------------------
-int CDog::GetValue()
+float  CDog::GetWeight()
 {
-	return m_intValue;
+	return m_sngWeight;
 }
 
+// --------------------------------------------------------------------------------
+// Name: SetName
+// Abstract: Set the name
+// --------------------------------------------------------------------------------
+void CDog::SetName(string strName)
+{
+	// Boundary check
+	if (strName.length() <= 0)
+	{
+		strName = "";
+	}
+
+	m_strName = strName;
+}
+
+
+// --------------------------------------------------------------------------------
+// Name: GetName
+// Abstract: Get the Name
+// --------------------------------------------------------------------------------
+string CDog::GetName()
+{
+	return m_strName;
+}
 
 // --------------------------------------------------------------------------------
 // Name: DoSomething
 // Abstract: Do something
 // --------------------------------------------------------------------------------
-void CDog::DoSomething()
+void CDog::Bark()
 {
-	cout << "Something\n";
+	if (this->GetWeight() < 15.0f) {
+		cout << "Yip, yip, yip\n";
+	}
+	else {
+		cout << "Woof, woof\n";
+	}
+	
 }
 

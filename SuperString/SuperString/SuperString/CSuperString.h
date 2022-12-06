@@ -3,9 +3,16 @@
 // --------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------
+// Compiler Directives
+// --------------------------------------------------------------------------------
+
+#pragma once
+
+// --------------------------------------------------------------------------------
 // Includes
 // --------------------------------------------------------------------------------
 #include <stdlib.h>
+#include <cstdio>
 #include <iostream>
 using namespace std;
 class CSuperString
@@ -29,32 +36,24 @@ public:
 	CSuperString(const float sngFloatToCopy);
 	CSuperString(const double dblDoubleToCopy);
 	CSuperString(const CSuperString &ssStringToCopy);
-	void Initialize(const char * pstrStringToCopy,
-				const bool blnBooleanToCopy,
-				const char chrLetterToCopy,
-				const short shtShortToCopy,
-				const int intIntegerToCopy,
-				const long lngLongToCopy,
-				const float sngFloatToCopy,
-				const double dblDoubleToCopy,
-				char* & ssStringToCopy);
+	
 
 	// Destructor
 	virtual ~CSuperString();
-	void CleanUp();
+
 
 	long Length() const;
 
 	// Assignment Operators
-	void operator = (const char *pstrStringToCopy);
-	void operator = (const char chrLetterToCopy);
-	void operator = (const CSuperString &ssStringToCopy);
+	CSuperString &operator = (const char *pstrStringToCopy);
+	CSuperString &operator = (const char chrLetterToCopy);
+	CSuperString &operator = (const CSuperString &ssStringToCopy);
 	// Extra credit for numeric parameters
 
 	// Concatenate operator
-	void operator += (const char *pstrStringToAppend);
-	void operator += (const char chrCharacterToAppend);
-	void operator += (const CSuperString &ssStringToAppend);
+	CSuperString& operator += (const char *pstrStringToAppend);
+	CSuperString& operator += (const char chrCharacterToAppend);
+	CSuperString& operator += (const CSuperString &ssStringToAppend);
 	// Extra credit for numeric parameters
 
 	friend CSuperString operator + (const CSuperString &ssLeft,
@@ -97,7 +96,7 @@ public:
 	char& operator [ ] (long lngIndex);
 	const char& operator [ ] (long lngIndex) const;
 
-	const char* ToString();
+	const char* ToString() const;
 	bool ToBoolean();
 	short ToShort();
 	int ToInteger();
@@ -112,7 +111,15 @@ public:
 
 	// Don�t forget the comparison operators!!!
 
+	void Print(const char* pstrCaption) const;
 
 
-	char* CloneString(const char* pstrSource);
+
+	protected:
+		void Initialize();
+		void DeepCopy(const char* pstrSource);
+		void CleanUp();
+		void DeleteString(char* &pstrSource);
+		char* CloneString(const char* pstrSource);
+		
 };

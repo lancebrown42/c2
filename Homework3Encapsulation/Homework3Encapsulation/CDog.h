@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------
-// Name: CClassName
-// Abstract: This class ...
+// Name: CDog
+// Abstract: Defines dog object
 // --------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ public:			// Never make public properties.
 
 protected:
 
-	int m_intValue;
+
 
 private:
 	string m_strName;
@@ -36,11 +36,14 @@ private:
 public:
 
 	// Value
-	void SetValue(int intNewValue);
-	int GetValue();
+	void SetWeight(float sngWeight);
+	float GetWeight();
+	void SetName(string strName);
+	string GetName();
 
 	// DoSomething
-	void DoSomething();
+	void Bark();
+
 
 protected:
 

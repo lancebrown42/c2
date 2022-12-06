@@ -1,3 +1,5 @@
-﻿  Homework8.cpp
-c:\users\lance\code\c2\homework8\homework8\homework8\homework8.cpp(30): warning C4326: return type of 'main' should be 'int' instead of 'void'
+﻿  CResizableArray.cpp
+  Homework8.cpp
+c:\users\lance\code\c2\homework8\homework8\homework8\homework8.cpp(20): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
   Homework8.vcxproj -> C:\Users\lance\code\c2\Homework8\Homework8\Debug\Homework8.exe

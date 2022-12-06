@@ -1,0 +1,9 @@
+C:\Users\lance\code\c2\Homework13.StarterTemplate\bin\Debug\Homework13-TrimAllFormTextboxes.exe
+C:\Users\lance\code\c2\Homework13.StarterTemplate\bin\Debug\Homework13-TrimAllFormTextboxes.pdb
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13-TrimAllFormTextboxes.csprojAssemblyReference.cache
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13_TrimAllFormTextboxes.FMain.resources
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13_TrimAllFormTextboxes.Properties.Resources.resources
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13-TrimAllFormTextboxes.csproj.GenerateResource.cache
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13-TrimAllFormTextboxes.csproj.CoreCompileInputs.cache
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13-TrimAllFormTextboxes.exe
+C:\Users\lance\code\c2\Homework13.StarterTemplate\obj\x86\Debug\Homework13-TrimAllFormTextboxes.pdb

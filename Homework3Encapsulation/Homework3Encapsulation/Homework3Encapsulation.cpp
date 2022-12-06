@@ -1,20 +1,31 @@
-// Homework3Encapsulation.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//-----------------------------------------------------------------------
+// Name: Lance Brown
+// Class: C 2
+// Abstract: Homework 3- Encapsulation
+//-----------------------------------------------------------------------
 
 #include <iostream>
+#include <stdlib.h>
+#include "CDog.h"
+#include "CTrainedDog.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	CDog udtDog1;
+	udtDog1.SetName("Butch");
+	udtDog1.SetWeight(5.0f);
+	CTrainedDog udtTrainedDog1;
+	udtTrainedDog1.SetName("Fluffers");
+	udtTrainedDog1.SetWeight(95.0f);
+
+	printf("%s weighs %f pounds and says: ", udtDog1.GetName().c_str(), udtDog1.GetWeight());
+	udtDog1.Bark();
+	printf("%s weighs %f pounds and says: ", udtTrainedDog1.GetName().c_str(), udtTrainedDog1.GetWeight());
+	udtTrainedDog1.Bark();
+	printf("He can also do tricks. Fetch!\n");
+	udtTrainedDog1.Fetch();
+	printf("Play dead!\n");
+	udtTrainedDog1.PlayDead();
+	
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

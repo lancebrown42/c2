@@ -77,11 +77,11 @@ public:
 	// cout << ssBuffer.ToUpperCase( ) << endl;	// I LOVE STAR TREK
 	// cout << ssBuffer.ToString( ) << endl;		// I Love Star Trek
 	CSuperString ToUpperCase();
-	const char* ToLowerCase();
-	const char* TrimLeft();
-	const char* TrimRight();
-	const char* Trim();
-	const char* Reverse();
+	CSuperString ToLowerCase();
+	CSuperString TrimLeft();
+	CSuperString TrimRight();
+	CSuperString Trim();
+	CSuperString Reverse();
 
 	CSuperString Left(long lngCharactersToCopy);
 	CSuperString Right(long lngCharactersToCopy);

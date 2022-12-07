@@ -16,7 +16,7 @@ CSuperString::CSuperString()
 CSuperString::CSuperString(const CSuperString &ssOriginalToCopy)
 {
 	Initialize();
-	*this = ssOriginalToCopy.ToString();
+	*this = ssOriginalToCopy;
 
 }
 // --------------------------------------------------------------------------------
@@ -124,6 +124,7 @@ CSuperString::CSuperString(const double dblDoubleToCopy)
 void CSuperString::Initialize(){
 
 	*this = "";
+	
 }
 // --------------------------------------------------------------------------------
 // method: ~CSuperString
@@ -138,7 +139,10 @@ CSuperString::~CSuperString() {
 // --------------------------------------------------------------------------------
 void CSuperString::DeepCopy(const char * pstrSource)
 {
-	m_pstrSuperString = CloneString(pstrSource);
+	char* pstrCopy = 0;
+	pstrCopy = CloneString(pstrSource);
+	CleanUp();
+	m_pstrSuperString = pstrCopy;
 }
 // --------------------------------------------------------------------------------
 // method: CleanUp
@@ -212,10 +216,7 @@ long CSuperString::Length() const
 
 CSuperString& CSuperString::operator=(const char *pstrStringToCopy)
 {
-	if (m_pstrSuperString != nullptr)
-	{
-		delete[] m_pstrSuperString;
-	}
+	
 
 	DeepCopy(pstrStringToCopy);
 
@@ -244,12 +245,7 @@ CSuperString& CSuperString::operator=(const char chrLetterToCopy)
 // --------------------------------------------------------------------------------
 CSuperString& CSuperString::operator=(const CSuperString &ssStringToCopy)
 {
-	if (m_pstrSuperString != nullptr)
-	{
-		delete[] m_pstrSuperString;
-	}
-
-	DeepCopy(ssStringToCopy.m_pstrSuperString);
+	DeepCopy(ssStringToCopy.ToString());
 
 	return *this;
 }
@@ -527,12 +523,11 @@ long CSuperString::FindLastIndexOf(const char *pstrSubStringToFind)
 //	return nullptr;
 //}
 //#########################################################
-const char* CSuperString::ToUpperCase()
+CSuperString CSuperString::ToUpperCase()
 {
-	char* strUpper = new char[Length() + 1];
-	for (int i = 0; i < Length(); i++) {
-		strUpper[i] = toupper(m_pstrSuperString[i]);
-	}
+	CSuperString strUpper;
+	strUpper = m_pstrSuperString;
+	_strupr(strUpper.m_pstrSuperString);
 
 	return strUpper;
 }
@@ -642,29 +637,35 @@ const char* CSuperString::Reverse()
 //{
 //	return nullptr;
 //}
-const char* CSuperString::Left(long lngCharactersToCopy)
+CSuperString CSuperString::Left(long lngCharactersToCopy)
 {
-	char* pstrResult = nullptr;
+	CSuperString ssLeft;
 
-	if (m_pstrSuperString != nullptr)
-	{
-		long lngLength = strlen(m_pstrSuperString);
+	ssLeft = Substring(0, lngCharactersToCopy);
+	/*char* pstrLeft = 0;
+	long lngLength = 0;
+	lngLength = Length();
+	if (lngCharactersToCopy < 0) lngCharactersToCopy = 0;
+	if (lngCharactersToCopy > lngLength) lngCharactersToCopy = lngLength;
 
-		if (lngCharactersToCopy > lngLength)
-		{
-			lngCharactersToCopy = lngLength;
-		}
+	pstrLeft = new char[lngCharactersToCopy + 1];
 
-		pstrResult = new char[lngCharactersToCopy + 1];
-		strncpy_s(pstrResult, lngCharactersToCopy + 1, m_pstrSuperString, lngCharactersToCopy);
-	}
+	strncpy_s(pstrLeft, lngCharactersToCopy + 1, m_pstrSuperString, lngCharactersToCopy);
 
-	return pstrResult;
+	ssLeft.CleanUp();
+	ssLeft.m_pstrSuperString = pstrLeft;*/
+
+	return ssLeft;
 }
 
-const char* CSuperString::Right(long lngCharactersToCopy)
+CSuperString CSuperString::Right(long lngCharactersToCopy)
 {
-	char* pstrResult = nullptr;
+	CSuperString ssRight;
+
+	ssRight = Substring(Length() - lngCharactersToCopy, lngCharactersToCopy);
+	/*char* pstrRight = 0;
+	long lngLength = 0;
+	lngLength = Length();
 
 	if (m_pstrSuperString != nullptr)
 	{
@@ -677,20 +678,29 @@ const char* CSuperString::Right(long lngCharactersToCopy)
 
 		long lngStartIndex = lngLength - lngCharactersToCopy;
 
-		pstrResult = new char[lngCharactersToCopy + 1];
-		strncpy_s(pstrResult, lngCharactersToCopy + 1, m_pstrSuperString + lngStartIndex, lngCharactersToCopy);
+		pstrRight = new char[lngCharactersToCopy + 1];
+		strncpy_s(pstrRight, lngCharactersToCopy + 1, m_pstrSuperString + lngStartIndex, lngCharactersToCopy);
 	}
+	ssRight.CleanUp();
+	ssRight.m_pstrSuperString = pstrRight;*/
 
-	return pstrResult;
+	return ssRight;
 }
 
-const char* CSuperString::Substring(long lngStart, long lngSubStringLength)
+CSuperString CSuperString::Substring(long lngStart, long lngSubStringLength)
 {
-	char* pstrResult = nullptr;
+	CSuperString ssSub;
+	char* pstrSub = 0;
+	long lngLength = 0;
+	lngLength = Length();
 
 	if (m_pstrSuperString != nullptr)
 	{
 		long lngLength = strlen(m_pstrSuperString);
+
+		if (lngStart < 0) {
+			lngStart = 0;
+		}
 
 		if (lngStart > lngLength)
 		{
@@ -702,11 +712,13 @@ const char* CSuperString::Substring(long lngStart, long lngSubStringLength)
 			lngSubStringLength = lngLength - lngStart;
 		}
 
-		pstrResult = new char[lngSubStringLength + 1];
-		strncpy_s(pstrResult, lngSubStringLength + 1, m_pstrSuperString + lngStart, lngSubStringLength);
+		pstrSub = new char[lngSubStringLength + 1];
+		strncpy_s(pstrSub, lngSubStringLength + 1, m_pstrSuperString + lngStart, lngSubStringLength);
 	}
-
-	return pstrResult;
+	ssSub.CleanUp();
+	ssSub.m_pstrSuperString = pstrSub;
+	cout << ssSub;
+	return ssSub;
 }
 
 const char* CSuperString::Replace(char chrLetterToFind, char chrReplace)
@@ -727,72 +739,43 @@ const char* CSuperString::Replace(char chrLetterToFind, char chrReplace)
 	return m_pstrSuperString;
 }
 
-const char * CSuperString::Replace(const char * pstrFind, const char * pstrReplace)
+CSuperString CSuperString::Replace(const char * pstrFind, const char * pstrReplace)
 {
-	if (m_pstrSuperString == nullptr || pstrFind == nullptr || pstrReplace == nullptr)
+	CSuperString ssReplacedString;
+	if (m_pstrSuperString != nullptr && pstrFind != nullptr && pstrReplace != nullptr)
 	{
-		return m_pstrSuperString;
-	}
+		long lngFindLength = strlen(pstrFind);
+		long lngReplaceLength = strlen(pstrReplace);
 
-
-	char *pstrTemp = CloneString(m_pstrSuperString);
-	long lngLength = strlen(m_pstrSuperString);
-	long lngFindLength = strlen(pstrFind);
-	long lngReplaceLength = strlen(pstrReplace);
-
-	long lngNewLength = lngLength + (lngReplaceLength - lngFindLength);
-	CSuperString pstrChanged;
-
-	if (lngFindLength > 0)
-	{
-		// Search for the substring in the original string
-		char *pstrSubstring = strstr(pstrTemp, pstrFind);
-
-		while (pstrSubstring != nullptr)
+		if (lngFindLength > 0)
 		{
-			// Create a new string to hold the modified string
-			char *pstrBeforeString = new char[pstrSubstring - pstrTemp + 1];
-			char *pstrNewString = new char[lngNewLength + 1];
-			char *pstrAfterString = new char[lngNewLength + 1];
-			CSuperString pstrAlteredChunk = new char[lngNewLength + 1];
-			pstrBeforeString[pstrSubstring - pstrTemp] = '\0';
-			pstrNewString[0] = '\0';
-			pstrAfterString[0] = '\0';
-			pstrAlteredChunk[0] = '\0';
+			long lngStart = 0;
+			long lngLength = strlen(m_pstrSuperString);
 
-			// Copy the characters before the substring
-			long lngBeforeLength = pstrSubstring - pstrTemp;
-			strncpy_s(pstrBeforeString, lngLength, pstrTemp, pstrSubstring - pstrTemp);
+			// Search for the substring in the original string
+			char* pstrSubstring = strstr(m_pstrSuperString, pstrFind);
 
-			// Copy the characters in the replace string
-			strcat_s(pstrNewString, lngReplaceLength + 1, pstrReplace);
-			//memmove(pstrNewString + lngReplaceLength, pstrTemp + lngFindLength, );
-			// Copy the characters after the substring
-			long lngAfterLength = lngLength + (lngReplaceLength - lngFindLength) + 1;
-			strcat_s(pstrAfterString, lngAfterLength + 1, pstrSubstring + lngFindLength);
+          			while (pstrSubstring != nullptr)
+			{
+				// Copy the characters before the substring
+				long lngBeforeLength = pstrSubstring - m_pstrSuperString;
+				ssReplacedString += Substring(lngStart, lngBeforeLength - lngStart);
+				// Copy the characters in the replace string
+				ssReplacedString += pstrReplace;
 
-			// Update the original string with the modified string
-			pstrAlteredChunk += pstrBeforeString;
-			pstrAlteredChunk += pstrNewString;
-			//pstrFinalString += pstrAfterString;
-			//delete[] m_pstrSuperString;
-			
-			pstrChanged += pstrAlteredChunk;
-			lngLength += (lngReplaceLength - lngFindLength);
+				lngStart = lngBeforeLength + lngFindLength;
 
-			// Update the temporary string
-			delete[] pstrTemp;
-			pstrTemp = CloneString(pstrAfterString);
+				// Search for the next substring
+				pstrSubstring = strstr(m_pstrSuperString + lngStart, pstrFind);
+			}
 
-			// Clean up locals
-		
-			// Search for the next substring
-			pstrSubstring = strstr(pstrTemp, pstrFind);
+			ssReplacedString += Substring(lngStart, lngLength - lngStart);
 		}
 	}
-	*this = pstrChanged;
-	delete[] pstrTemp;
-	return m_pstrSuperString;
+
+	return ssReplacedString;
+
+
 }
 
 const char* CSuperString::Insert(const char chrLetterToInsert, long lngIndex)

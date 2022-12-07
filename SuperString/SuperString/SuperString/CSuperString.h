@@ -7,7 +7,8 @@
 // --------------------------------------------------------------------------------
 
 #pragma once
-
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable : 4996)
 // --------------------------------------------------------------------------------
 // Includes
 // --------------------------------------------------------------------------------
@@ -75,20 +76,20 @@ public:
 	// cout << ssBuffer.ToString( ) << endl;		// I Love Star Trek
 	// cout << ssBuffer.ToUpperCase( ) << endl;	// I LOVE STAR TREK
 	// cout << ssBuffer.ToString( ) << endl;		// I Love Star Trek
-	const char* ToUpperCase();
+	CSuperString ToUpperCase();
 	const char* ToLowerCase();
 	const char* TrimLeft();
 	const char* TrimRight();
 	const char* Trim();
 	const char* Reverse();
 
-	const char* Left(long lngCharactersToCopy);
-	const char* Right(long lngCharactersToCopy);
-	const char* Substring(long lngStart, long lngSubStringLength);
+	CSuperString Left(long lngCharactersToCopy);
+	CSuperString Right(long lngCharactersToCopy);
+	CSuperString Substring(long lngStart, long lngSubStringLength);
 
 	const char* Replace(char chrLetterToFind, char chrReplace);
 	// Hard
-	const char* Replace(const char *pstrFind, const char* pstrReplace);
+	CSuperString Replace(const char *pstrFind, const char* pstrReplace);
 	const char* Insert(const char chrLetterToInsert, long lngIndex);
 	const char* Insert(const char *pstrSubString, long lngIndex);
 

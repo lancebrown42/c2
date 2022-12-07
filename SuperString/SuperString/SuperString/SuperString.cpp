@@ -42,23 +42,52 @@ void MuahahahTest1()
 	ssTest8.Print("float");
 	CSuperString ssTest9((double) 32767);
 	ssTest9.Print("double");
-	
+	ssTest2 = ssTest2.ToUpperCase();
+	ssTest2.Print("To upper");
 	
 }
 
 void MuahahahTest2()
 {
-	CSuperString ssTest = "I Love Star Wars and I Love Star Trek";
-
-	ssTest = ssTest.Replace("Love", "Really Love Love");
+	CSuperString ssTest("I Love Star Wars and I Love Star Trek");
+	
+	//ssTest = ssTest.Replace('l', 'r');
+	//ssTest = ssTest.Replace("Love", "Really Love Love");
+	ssTest = ssTest.Substring(3, 15);
 
 	ssTest.Print("Test2");
+}
+void Test3() {
+	CSuperString ssTest;
+	CSuperString ssTest2;
+	CSuperString ssTest3;
+
+	ssTest = "banana";
+	ssTest.Print("=String");
+	ssTest = 'c';
+	ssTest.Print("=Char");
+	ssTest2 = ssTest;
+	ssTest2.Print("=SuperString");
+	ssTest += "rike";
+	ssTest.Print("+=String");
+	ssTest += 'y';
+	ssTest.Print("+=char");
+	ssTest += ssTest2;
+	ssTest.Print("+=Superstring");
+	ssTest3 = ssTest2 + ssTest;
+	ssTest3.Print("+ Superstring");
+	ssTest3 = "blimey " + ssTest;
+	ssTest3.Print("+ Superstring");
+	ssTest3 = ssTest + " mate";
+	ssTest3.Print("+ Superstring");
+
 }
 int main()
 {
     std::cout << "Hello World!\n";
-	MuahahahTest1();
+	//MuahahahTest1();
 	MuahahahTest2();
+	//Test3();
 }
 
 

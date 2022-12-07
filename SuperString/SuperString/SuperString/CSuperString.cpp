@@ -274,7 +274,7 @@ CSuperString& CSuperString::operator+=(const char *pstrStringToAppend)
 
 	if (m_pstrSuperString != nullptr)
 	{
-		delete[] m_pstrSuperString;
+		CleanUp();
 	}
 	m_pstrSuperString = pstrTemp;
 
@@ -330,7 +330,7 @@ CSuperString& CSuperString::operator+=(const CSuperString &ssStringToAppend)
 
 	if (m_pstrSuperString != nullptr)
 	{
-		delete[] m_pstrSuperString;
+		CleanUp();
 	}
 	m_pstrSuperString = pstrTemp;
 
@@ -740,6 +740,9 @@ const char * CSuperString::Replace(const char * pstrFind, const char * pstrRepla
 	long lngFindLength = strlen(pstrFind);
 	long lngReplaceLength = strlen(pstrReplace);
 
+	long lngNewLength = lngLength + (lngReplaceLength - lngFindLength);
+	CSuperString pstrChanged;
+
 	if (lngFindLength > 0)
 	{
 		// Search for the substring in the original string
@@ -748,34 +751,46 @@ const char * CSuperString::Replace(const char * pstrFind, const char * pstrRepla
 		while (pstrSubstring != nullptr)
 		{
 			// Create a new string to hold the modified string
-			char *pstrNewString = new char[lngLength + 1];
+			char *pstrBeforeString = new char[pstrSubstring - pstrTemp + 1];
+			char *pstrNewString = new char[lngNewLength + 1];
+			char *pstrAfterString = new char[lngNewLength + 1];
+			CSuperString pstrAlteredChunk = new char[lngNewLength + 1];
+			pstrBeforeString[pstrSubstring - pstrTemp] = '\0';
 			pstrNewString[0] = '\0';
+			pstrAfterString[0] = '\0';
+			pstrAlteredChunk[0] = '\0';
 
 			// Copy the characters before the substring
 			long lngBeforeLength = pstrSubstring - pstrTemp;
-			strncpy_s(pstrNewString, lngLength + 1, pstrTemp, lngBeforeLength);
+			strncpy_s(pstrBeforeString, lngLength, pstrTemp, pstrSubstring - pstrTemp);
 
 			// Copy the characters in the replace string
-			strcat_s(pstrNewString, lngLength + 1, pstrReplace);
-
+			strcat_s(pstrNewString, lngReplaceLength + 1, pstrReplace);
+			//memmove(pstrNewString + lngReplaceLength, pstrTemp + lngFindLength, );
 			// Copy the characters after the substring
-			long lngAfterLength = lngLength - (pstrSubstring - pstrTemp + lngFindLength);
-			strcat_s(pstrNewString, lngAfterLength + 1, pstrSubstring + lngFindLength);
+			long lngAfterLength = lngLength + (lngReplaceLength - lngFindLength) + 1;
+			strcat_s(pstrAfterString, lngAfterLength + 1, pstrSubstring + lngFindLength);
 
 			// Update the original string with the modified string
-			delete[] m_pstrSuperString;
-			m_pstrSuperString = pstrNewString;
+			pstrAlteredChunk += pstrBeforeString;
+			pstrAlteredChunk += pstrNewString;
+			//pstrFinalString += pstrAfterString;
+			//delete[] m_pstrSuperString;
+			
+			pstrChanged += pstrAlteredChunk;
 			lngLength += (lngReplaceLength - lngFindLength);
 
 			// Update the temporary string
 			delete[] pstrTemp;
-			pstrTemp = CloneString(m_pstrSuperString);
+			pstrTemp = CloneString(pstrAfterString);
 
+			// Clean up locals
+		
 			// Search for the next substring
 			pstrSubstring = strstr(pstrTemp, pstrFind);
 		}
 	}
-
+	*this = pstrChanged;
 	delete[] pstrTemp;
 	return m_pstrSuperString;
 }

@@ -59,6 +59,8 @@ void MuahahahTest2()
 	ssTest.Print("Replace string");
 	ssTest = ssTest.Substring(3, 15);
 	ssTest.Print("Substring 3, 15");
+	ssTest = ssTest.Insert("|||||", 6);
+	ssTest.Print("Insert '|||||'");
 
 }
 void Test3() {
@@ -87,7 +89,16 @@ void Test3() {
 
 }
 void TestIndices() {
-	CSuperString ssTest("Irish Wristwatch");
+	CSuperString ssTest("  Irish Wristwatch   ");
+	ssTest.Print("Trimming: ");
+	ssTest = ssTest.TrimLeft();
+	ssTest.Print("Trimmed left");
+	ssTest = ssTest.TrimRight();
+	ssTest.Print("Trimmed right");
+	ssTest = "   Irish Wristwatch   ";
+	ssTest.Print("Reset whitespace");
+	ssTest = ssTest.Trim();
+	ssTest.Print("Trim");
 	ssTest.Print("FindIndexOf for string:");
 	cout << "First S: "<< ssTest.FindFirstIndexOf('s') << endl;
 	cout << "First S after index 4: "<<ssTest.FindFirstIndexOf('s', 4) << endl;
@@ -98,8 +109,8 @@ void TestIndices() {
 int main()
 {
     std::cout << "Hello World!\n";
-	MuahahahTest1();
-	//MuahahahTest2();
+	//MuahahahTest1();
+	MuahahahTest2();
 	//Test3();
 	//TestIndices();
 }

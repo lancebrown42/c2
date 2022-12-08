@@ -556,7 +556,7 @@ CSuperString CSuperString::ToLowerCase()
 
 CSuperString CSuperString::TrimLeft()
 {
-	char* pstrResult = nullptr;
+	CSuperString pstrResult;
 
 	if (m_pstrSuperString != nullptr)
 	{
@@ -568,20 +568,19 @@ CSuperString CSuperString::TrimLeft()
 
 		long lngLength = strlen(m_pstrSuperString);
 		long lngTrimmedLength = lngLength - lngStartIndex;
-		pstrResult = new char[lngTrimmedLength + 1];
-		strncpy_s(pstrResult, lngTrimmedLength + 1, m_pstrSuperString + lngStartIndex, lngTrimmedLength + 1);
+		pstrResult = Substring(lngStartIndex, lngTrimmedLength);
+		//strncpy_s(pstrResult, lngTrimmedLength + 1, m_pstrSuperString + lngStartIndex, lngTrimmedLength + 1);
 	}
-
-	return pstrResult;
+	*this = pstrResult;
+	return *this;
 }
 
 CSuperString CSuperString::TrimRight()
 {
-	char* pstrResult = nullptr;
-
+	CSuperString pstrResult;
 	if (m_pstrSuperString != nullptr)
 	{
-		long lngLength = strlen(m_pstrSuperString);
+		long lngLength = Length();
 		long lngEndIndex = lngLength - 1;
 		while (isspace(m_pstrSuperString[lngEndIndex]))
 		{
@@ -589,35 +588,19 @@ CSuperString CSuperString::TrimRight()
 		}
 
 		long lngTrimmedLength = lngEndIndex + 1;
-		pstrResult = new char[lngTrimmedLength + 1];
-		strncpy_s(pstrResult, lngTrimmedLength + 1, m_pstrSuperString, lngTrimmedLength + 1);
+		pstrResult = Substring(0, lngTrimmedLength);
 	}
-
-	return pstrResult;
+	*this = pstrResult;
+	return *this;
 }
 
 CSuperString CSuperString::Trim()
 {
-	CSuperString pstrResult = nullptr;
+	CSuperString pstrResult;
 
-	if (m_pstrSuperString != nullptr)
-	{
-		CSuperString pstrTrimmedLeft = TrimLeft();
-		long lngTrimmedLength = pstrTrimmedLeft.Length();
-
-		long lngEndIndex = lngTrimmedLength - 1;
-		while (isspace(pstrTrimmedLeft[lngEndIndex]))
-		{
-			lngEndIndex--;
-		}
-
-		long lngTrimmedRightLength = lngEndIndex + 1;
-		pstrResult = new char[lngTrimmedRightLength + 1];
-		pstrResult = pstrTrimmedLeft.Right(lngTrimmedLength);
-		//strncpy_s(pstrResult, lngTrimmedRightLength + 1, pstrTrimmedLeft, lngTrimmedRightLength + 1);
-
-		//delete[] pstrTrimmedLeft;
-	}
+	pstrResult = CloneString(m_pstrSuperString);
+	pstrResult = pstrResult.TrimLeft();
+	pstrResult = pstrResult.TrimRight();
 	*this = pstrResult;
 	return *this;
 }
@@ -636,20 +619,7 @@ CSuperString CSuperString::Reverse()
 	*this = pstrResult;
 	return *this;
 }
-//const char * CSuperString::Left(long lngCharactersToCopy)
-//{
-//	return nullptr;
-//}
-//
-//const char * CSuperString::Right(long lngCharactersToCopy)
-//{
-//	return nullptr;
-//}
-//
-//const char * CSuperString::Substring(long lngStart, long lngSubStringLength)
-//{
-//	return nullptr;
-//}
+
 CSuperString CSuperString::Left(long lngCharactersToCopy)
 {
 	CSuperString ssLeft;
@@ -790,7 +760,7 @@ CSuperString CSuperString::Replace(const char * pstrFind, const char * pstrRepla
 
 }
 
-const char* CSuperString::Insert(const char chrLetterToInsert, long lngIndex)
+CSuperString CSuperString::Insert(const char chrLetterToInsert, long lngIndex)
 {
 	if (m_pstrSuperString != nullptr)
 	{
@@ -815,13 +785,12 @@ const char* CSuperString::Insert(const char chrLetterToInsert, long lngIndex)
 		strcpy_s(pstrNewString + lngIndex + 1, lngLength + 2, m_pstrSuperString + lngIndex);
 
 		// Update the original string with the modified string
-		delete[] m_pstrSuperString;
-		m_pstrSuperString = pstrNewString;
+		*this = pstrNewString;
 	}
 
-	return m_pstrSuperString;
+	return *this;
 }
-const char* CSuperString::Insert(const char *pstrSubString, long lngIndex)
+CSuperString CSuperString::Insert(const char *pstrSubString, long lngIndex)
 {
 	if (m_pstrSuperString != nullptr && pstrSubString != nullptr)
 	{
@@ -834,24 +803,27 @@ const char* CSuperString::Insert(const char *pstrSubString, long lngIndex)
 		}
 
 		// Create a new string to hold the modified string
-		char *pstrNewString = new char[lngLength + lngSubStringLength + 1];
-		pstrNewString[0] = '\0';
+		//char *pstrNewString = new char[lngLength + lngSubStringLength + 1];
+		CSuperString ssNewString;
+		//pstrNewString[0] = '\0';
 
 		// Copy the characters before the insert position
-		strncpy_s(pstrNewString, lngLength + lngSubStringLength + 1, m_pstrSuperString, lngIndex);
+		//strncpy_s(pstrNewString, lngLength + lngSubStringLength + 1, m_pstrSuperString, lngIndex);
+		ssNewString = Left(lngIndex);
 
 		// Copy the sub-string to insert
-		strcpy_s(pstrNewString + lngIndex, lngLength + lngSubStringLength + 1, pstrSubString);
+		//strcpy_s(pstrNewString + lngIndex, lngLength + lngSubStringLength + 1, pstrSubString);
+		ssNewString += pstrSubString;
 
 		// Copy the characters after the insert position
-		strcpy_s(pstrNewString + lngIndex + lngSubStringLength, lngLength + lngSubStringLength + 1, m_pstrSuperString + lngIndex);
-
+		//strcpy_s(pstrNewString + lngIndex + lngSubStringLength, lngLength + lngSubStringLength + 1, m_pstrSuperString + lngIndex);
+		ssNewString += Right(Length() - lngIndex);
 		// Update the original string with the modified string
-		delete[] m_pstrSuperString;
-		m_pstrSuperString = pstrNewString;
+		//delete[] m_pstrSuperString;
+		*this = ssNewString;
 	}
 
-	return m_pstrSuperString;
+	return *this;
 }
 
 char& CSuperString::operator[](long lngIndex)

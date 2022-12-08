@@ -90,8 +90,8 @@ public:
 	const char* Replace(char chrLetterToFind, char chrReplace);
 	// Hard
 	CSuperString Replace(const char *pstrFind, const char* pstrReplace);
-	const char* Insert(const char chrLetterToInsert, long lngIndex);
-	const char* Insert(const char *pstrSubString, long lngIndex);
+	CSuperString Insert(const char chrLetterToInsert, long lngIndex);
+	CSuperString Insert(const char *pstrSubString, long lngIndex);
 
 	// Subscript operator
 	char& operator [ ] (long lngIndex);

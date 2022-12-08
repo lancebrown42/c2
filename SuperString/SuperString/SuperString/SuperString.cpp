@@ -7,6 +7,22 @@
 void MuahahahTest1()
 {
 	CSuperString ssTest;
+	cout << "Muahahah Test #1: " << ssTest << endl;
+}
+void MuahahahTest2()
+{
+	CSuperString ssTest = "I Love Star Wars and I Love Star Trek";
+
+	ssTest = ssTest.Replace("Love", "Really Love Love");
+
+	cout << "Muahahah Test #2: " << ssTest << endl;
+}
+
+void TestConstructors()
+{
+	const char* pstrTestName = "TestConstructors";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+	CSuperString ssTest;
 	ssTest.Print("Empty");
 	CSuperString ssTest2("I Love Star Trek");
 	ssTest2.Print("String");
@@ -33,6 +49,9 @@ void MuahahahTest1()
 
 void TestMutators()
 {
+	const char* pstrTestName = "TestMutators";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
 	CSuperString ssTest("I Love Star Wars and I Love Star Trek");
 	ssTest.Print("Initial string");
 	ssTest = ssTest.Replace('r', 'l');
@@ -46,6 +65,9 @@ void TestMutators()
 
 }
 void TestAssignmentOperators() {
+	const char* pstrTestName = "TestAssignmentOperators";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
 	CSuperString ssTest;
 	CSuperString ssTest2;
 	CSuperString ssTest3;
@@ -71,6 +93,9 @@ void TestAssignmentOperators() {
 
 }
 void TestIndices() {
+	const char* pstrTestName = "TestIndices";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
 	CSuperString ssTest("  Irish Wristwatch   ");
 	ssTest.Print("Trimming: ");
 	ssTest = ssTest.TrimLeft();
@@ -89,20 +114,26 @@ void TestIndices() {
 
 }
 void TestIO() {
+	const char* pstrTestName = "TestIO";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
 	CSuperString ssBuffer;
+	cout << "Type stuff: ";
 	cin >> ssBuffer;
-	cout << ssBuffer;
+	cout << ssBuffer << endl;
 	printf("Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
 
 }
 int main()
 {
     std::cout << "Hello World!\n";
-	//MuahahahTest1();
+	TestConstructors();
 	TestMutators();
 	TestAssignmentOperators();
-	//TestIndices();
+	TestIndices();
 	TestIO();
+	MuahahahTest1();
+	MuahahahTest2();
 }
 
 

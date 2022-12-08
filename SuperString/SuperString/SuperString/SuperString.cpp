@@ -6,24 +6,6 @@
 
 void MuahahahTest1()
 {
-	//CSuperString ss1;
-	//CSuperString ss2("Test");
-	//CSuperString ss3(true);
-	//CSuperString ss4('A');
-	//CSuperString ss5(5);
-	//CSuperString ss6(5l);
-	//CSuperString ss7(5.5f);
-	//CSuperString ss8(5.5);
-	//CSuperString ss9(ss2);
-	//std::cout << ss1 << std::endl;
-	//std::cout << ss2 << std::endl;
-	//std::cout << ss3 << std::endl;
-	//std::cout << ss4 << std::endl;
-	//std::cout << ss5 << std::endl;
-	//std::cout << ss6 << std::endl;
-	//std::cout << ss7 << std::endl;
-	//std::cout << ss8 << std::endl;
-	//std::cout << ss9 << std::endl;
 	CSuperString ssTest;
 	ssTest.Print("Empty");
 	CSuperString ssTest2("I Love Star Trek");
@@ -49,7 +31,7 @@ void MuahahahTest1()
 	
 }
 
-void MuahahahTest2()
+void TestMutators()
 {
 	CSuperString ssTest("I Love Star Wars and I Love Star Trek");
 	ssTest.Print("Initial string");
@@ -63,7 +45,7 @@ void MuahahahTest2()
 	ssTest.Print("Insert '|||||'");
 
 }
-void Test3() {
+void TestAssignmentOperators() {
 	CSuperString ssTest;
 	CSuperString ssTest2;
 	CSuperString ssTest3;
@@ -106,13 +88,21 @@ void TestIndices() {
 	
 
 }
+void TestIO() {
+	CSuperString ssBuffer;
+	cin >> ssBuffer;
+	cout << ssBuffer;
+	printf("Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
+
+}
 int main()
 {
     std::cout << "Hello World!\n";
 	//MuahahahTest1();
-	MuahahahTest2();
-	//Test3();
+	TestMutators();
+	TestAssignmentOperators();
 	//TestIndices();
+	TestIO();
 }
 
 

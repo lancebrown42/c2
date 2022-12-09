@@ -110,6 +110,7 @@ void TestIndices() {
 	cout << "First S: "<< ssTest.FindFirstIndexOf('s') << endl;
 	cout << "First S after index 4: "<<ssTest.FindFirstIndexOf('s', 4) << endl;
 	cout << "Last S: "<<ssTest.FindLastIndexOf('s') << endl;
+	cout << "subscript operator ssTest[3]: " << ssTest[3] << endl;
 	
 
 }
@@ -124,16 +125,113 @@ void TestIO() {
 	printf("Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
 
 }
+void TestComparison() {
+	const char* pstrTestName = "TestComparison";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
+	CSuperString ssTest1;
+	CSuperString ssTest2;
+	CSuperString ssTest3;
+	CSuperString ssTest4;
+	CSuperString ssTest5;
+	bool blnResult;
+	CSuperString ssResult;
+	ssResult = "This text shouldn't show";
+	ssTest1 = "I'm Left";
+	ssTest2 = "I'm Right";
+	ssTest3 = "I'm Left";
+	ssTest4 = "I'm Right";
+	ssTest5 = 'I';
+	const char chrTest = 'I';
+
+	ssResult = CSuperString(ssTest1 == ssTest2);
+	ssResult.Print("1 This should be false");
+	ssResult = CSuperString(ssTest1 == ssTest3);
+	ssResult.Print("2 This should be true");
+	ssResult = CSuperString(ssTest1 == "I'm Left");
+	ssResult.Print("3 This should be true");
+	ssResult = CSuperString(ssTest1 == "I'm Right");
+	ssResult.Print("4 This should be false");
+	ssResult = CSuperString(ssTest1 == chrTest);
+	ssResult.Print("5 This should be false");
+	ssResult = CSuperString(ssTest5 == chrTest);
+	ssResult.Print("6 This should be true");
+
+	ssResult = CSuperString(ssTest1 != ssTest2);
+	ssResult.Print("7 This should be true");
+	ssResult = CSuperString(ssTest1 != ssTest3);
+	ssResult.Print("8 This should be false");
+	ssResult = CSuperString(ssTest1 != "I'm Left");
+	ssResult.Print("9 This should be false");
+	ssResult = CSuperString(ssTest1 != "I'm Right");
+	ssResult.Print("10 This should be true");
+	ssResult = CSuperString(ssTest1 != chrTest);
+	ssResult.Print("11 This should be true");
+	ssResult = CSuperString(ssTest5 != chrTest);
+	ssResult.Print("12 This should be false");
+
+
+	ssResult = CSuperString(ssTest1 >= ssTest3);
+	ssResult.Print("13 This should be true");
+	ssResult = CSuperString(ssTest1 >= ssTest2);
+	ssResult.Print("14 This should be false");
+	ssResult = CSuperString(ssTest2 >= ssTest1);
+	ssResult.Print("15 This should be true");
+	ssResult = CSuperString(ssTest1 >= "ABC");
+	ssResult.Print("16 This should be true");
+	ssResult = CSuperString(ssTest1 >= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+	ssResult.Print("17 This should be false");
+
+
+	ssResult = CSuperString(ssTest1 <= ssTest3);
+	ssResult.Print("18 This should be true");
+	ssResult = CSuperString(ssTest1 <= ssTest2);
+	ssResult.Print("19 This should be true");
+	ssResult = CSuperString(ssTest2 <= ssTest1);
+	ssResult.Print("20 This should be false");
+	ssResult = CSuperString(ssTest1 <= "ABC");
+	ssResult.Print("21 This should be false");
+	ssResult = CSuperString(ssTest1 <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+	ssResult.Print("22 This should be true");
+
+
+	ssResult = CSuperString(ssTest1 > ssTest3);
+	ssResult.Print("23 This should be false");
+	ssResult = CSuperString(ssTest1 > ssTest2);
+	ssResult.Print("24 This should be false");
+	ssResult = CSuperString(ssTest2 > ssTest1);
+	ssResult.Print("25 This should be true");
+	ssResult = CSuperString(ssTest1 > "ABC");
+	ssResult.Print("26 This should be true");
+	ssResult = CSuperString(ssTest1 > "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+	ssResult.Print("27 This should be false");
+
+
+
+	ssResult = CSuperString(ssTest1 < ssTest3);
+	ssResult.Print("28 This should be false");
+	ssResult = CSuperString(ssTest1 < ssTest2);
+	ssResult.Print("29 This should be true");
+	ssResult = CSuperString(ssTest2 < ssTest1);
+	ssResult.Print("30 This should be false");
+	ssResult = CSuperString(ssTest1 < "ABC");
+	ssResult.Print("31 This should be false");
+	ssResult = CSuperString(ssTest1 < "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+	ssResult.Print("32 This should be true");
+
+
+}
 int main()
 {
     std::cout << "Hello World!\n";
-	TestConstructors();
-	TestMutators();
-	TestAssignmentOperators();
+	//TestConstructors();
+	//TestMutators();
+	//TestAssignmentOperators();
+	//TestComparison();
 	TestIndices();
-	TestIO();
-	MuahahahTest1();
-	MuahahahTest2();
+	//TestIO();
+	//MuahahahTest1();
+	//MuahahahTest2();
 }
 
 

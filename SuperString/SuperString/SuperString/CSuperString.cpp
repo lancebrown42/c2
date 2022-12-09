@@ -830,5 +830,279 @@ istream& operator >> (istream &isIn, CSuperString &ssInput)
 	return isIn;
 }
 
+/*
+Comparison Operator Overloads
+*/
+#pragma region
+bool& operator==(const CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) == 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator==(const CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) == 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator==(const char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString)== 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator==(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if (ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] == chrRight) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator==(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (ssRight.Length() == 1 && ssRight.m_pstrSuperString[0] == chrLeft) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator!=(const CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) != 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator!=(const CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) != 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator!=(const char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString) != 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator!=(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if ((ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] != chrRight) || ssLeft.Length() != 1) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator!=(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if ((ssRight.Length() == 1 && ssRight.m_pstrSuperString[0] != chrLeft) || ssRight.Length() != 1) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>=(const CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) >= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>=(const CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) >= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>=(const char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString) >= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>=(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if ((ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] >= chrRight) || ssLeft.Length() != 1) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>=(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (ssRight.Length() == 1 && chrLeft >= ssRight.m_pstrSuperString[0]) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<=(const CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) <= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<=(const CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) <= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<=(const char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString) <= 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<=(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if (ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] <= chrRight) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<=(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (ssRight.Length() == 1 && chrLeft <= ssRight.m_pstrSuperString[0]) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>(CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) > 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>(CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) > 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>(char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString) > 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if (ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] > chrRight) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator>(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (ssRight.Length() == 1 && chrLeft > ssRight.m_pstrSuperString[0]) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<(CSuperString& ssLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, ssRight.m_pstrSuperString) < 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<(CSuperString& ssLeft, const char* pstrRight)
+{
+	bool blnReturn = false;
+	if (strcmp(ssLeft.m_pstrSuperString, pstrRight) < 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<(char* pstrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (strcmp(pstrLeft, ssRight.m_pstrSuperString) < 0) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<(const CSuperString& ssLeft, const char chrRight)
+{
+	bool blnReturn = false;
+	if (ssLeft.Length() == 1 && ssLeft.m_pstrSuperString[0] < chrRight) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
+
+bool& operator<(const char chrLeft, const CSuperString& ssRight)
+{
+	bool blnReturn = false;
+	if (ssRight.Length() == 1 && chrLeft < ssRight.m_pstrSuperString[0]) {
+		blnReturn = true;
+	}
+	return blnReturn;
+}
 
 
+#pragma endregion

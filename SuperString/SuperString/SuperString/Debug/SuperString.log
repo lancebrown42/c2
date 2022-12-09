@@ -1,4 +1,3 @@
-﻿  CSuperString.cpp
-  SuperString.cpp
-  Generating Code...
-  SuperString.vcxproj -> C:\Users\lance\Documents\code\c2\SuperString\SuperString\Debug\SuperString.exe
+﻿  SuperString.cpp
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\SuperString.cpp(137,7): warning C4101: 'blnResult': unreferenced local variable
+  SuperString.vcxproj -> C:\Users\lance\code\c2\SuperString\SuperString\Debug\SuperString.exe

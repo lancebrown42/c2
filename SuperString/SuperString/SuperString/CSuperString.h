@@ -111,6 +111,41 @@ public:
 	friend istream& operator >> (istream &isIn, CSuperString &ssInput);
 
 	// Don�t forget the comparison operators!!!
+	friend bool& operator == (const CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator == (const CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator == (const char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator == (const CSuperString &ssLeft, const char chrRight);
+	friend bool& operator == (const char chrLeft, const CSuperString &ssRight);
+							 
+	friend bool& operator != (const CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator != (const CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator != (const char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator != (const CSuperString& ssLeft, const char chrRight);
+	friend bool& operator != (const char chrLeft, const CSuperString& ssRight);
+							  
+	friend bool& operator >= (const CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator >= (const CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator >= (const char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator >= (const CSuperString& ssLeft, const char chrRight);
+	friend bool& operator >= (const char chrLeft, const CSuperString& ssRight);
+						
+	friend bool& operator <= (const CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator <= (const CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator <= (const char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator <= (const CSuperString& ssLeft, const char chrRight);
+	friend bool& operator <= (const char chrLeft, const CSuperString& ssRight);
+
+	friend bool& operator > (CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator > (CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator > (char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator > (const CSuperString& ssLeft, const char chrRight);
+	friend bool& operator > (const char chrLeft, const CSuperString& ssRight);
+
+	friend bool& operator < (CSuperString &ssLeft, const CSuperString &ssRight);
+	friend bool& operator < (CSuperString &ssLeft, const char* pstrRight);
+	friend bool& operator < (char* pstrLeft, const CSuperString &ssRight);
+	friend bool& operator < (const CSuperString& ssLeft, const char chrRight);
+	friend bool& operator < (const char chrLeft, const CSuperString& ssRight);
 
 	void Print(const char* pstrCaption) const;
 

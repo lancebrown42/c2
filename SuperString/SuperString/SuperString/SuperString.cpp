@@ -1,5 +1,9 @@
-// SuperString.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//// --------------------------------------------------------------------------------
+//  SuperString.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Author: Lance Brown
+// --------------------------------------------------------------------------------
+
+
 
 #include <iostream>
 #include "CSuperString.h"
@@ -65,6 +69,8 @@ void TestMutators()
 	ssTest2.Print("Replace string");
 	ssTest2 = ssTest.Substring(3, 15);
 	ssTest2.Print("Substring 3, 15");
+	ssTest2 = ssTest.Insert('|', 6);
+	ssTest2.Print("Insert '|'");
 	ssTest2 = ssTest.Insert("|||||", 6);
 	ssTest2.Print("Insert '|||||'");
 	ssTest.Print("Initial string unaffected");
@@ -116,6 +122,9 @@ void TestIndices() {
 	cout << "First S: "<< ssTest.FindFirstIndexOf('s') << endl;
 	cout << "First S after index 4: "<<ssTest.FindFirstIndexOf('s', 4) << endl;
 	cout << "Last S: "<<ssTest.FindLastIndexOf('s') << endl;
+	cout << "First ri: "<< ssTest.FindFirstIndexOf("ri") << endl;
+	cout << "First ri after index 4: "<<ssTest.FindFirstIndexOf("ri", 4) << endl;
+	cout << "Last ri: "<<ssTest.FindLastIndexOf("ri") << endl;
 	cout << "subscript operator ssTest[3]: " << ssTest[3] << endl;
 	
 
@@ -130,6 +139,37 @@ void TestIO() {
 	cout << ssBuffer << endl;
 	printf("Double call:\n Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
 
+}
+void ExtraCredit() {
+	const char* pstrTestName = "Extra Credit";
+	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
+
+	CSuperString ssTest1;
+	CSuperString ssTest2;
+	CSuperString ssTest3;
+	CSuperString ssTest4;
+	CSuperString ssTest5;
+	CSuperString ssTest6;
+	ssTest1 = (int)123;
+	ssTest1.Print(" = int");
+	ssTest2 = (short)123;
+	ssTest2.Print(" = short");
+	ssTest3 = (long)123;
+	ssTest3.Print(" = long");
+	ssTest4 = (float)123;
+	ssTest4.Print(" = float");
+	ssTest5 = (double)123;
+	ssTest5.Print(" = double");
+	ssTest6 = ssTest1 + 73;
+	ssTest6.Print("+ int");
+	ssTest6 = ssTest1 + ssTest1.ToShort();
+	ssTest6.Print("+ short");
+	ssTest6 = ssTest1 + ssTest1.ToLong();
+	ssTest6.Print("+ long");
+	ssTest6 = ssTest1 + ssTest1.ToFloat();
+	ssTest6.Print("+ float");
+	ssTest6 = ssTest1 + ssTest1.ToDouble();
+	ssTest6.Print("+ double");
 }
 void TestComparison() {
 	const char* pstrTestName = "TestComparison";
@@ -233,11 +273,12 @@ int main()
 	TestConstructors();
 	TestMutators();
 	TestAssignmentOperators();
-	//TestComparison();
+	TestComparison();
 	TestIndices();
 	TestIO();
 	MuahahahTest1();
 	MuahahahTest2();
+	ExtraCredit();
 }
 
 

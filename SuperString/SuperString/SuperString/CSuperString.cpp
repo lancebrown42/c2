@@ -1,3 +1,8 @@
+// --------------------------------------------------------------------------------
+// Class: CSuperString 
+// Abstract: Implements string functionality
+// Author: Lance Brown
+// --------------------------------------------------------------------------------
 #include "CSuperString.h"
 #include <sstream>
 /*
@@ -269,6 +274,54 @@ CSuperString& CSuperString::operator=(const int intIntegerToCopy)
 	DeepCopy(strSource);
 	return *this;
 }
+// --------------------------------------------------------------------------------
+// method: operator=
+// description: Overloads the assignment operator to assign the given int to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator=(const short shtShortToCopy)
+{
+
+	char strSource[20] = "";
+	sprintf_s(strSource, "%hd", shtShortToCopy);
+	DeepCopy(strSource);
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator=
+// description: Overloads the assignment operator to assign the given int to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator=(const long lngLongToCopy)
+{
+
+	char strSource[20] = "";
+	sprintf_s(strSource, "%d", lngLongToCopy);
+	DeepCopy(strSource);
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator=
+// description: Overloads the assignment operator to assign the given int to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator=(const float sngFloatToCopy)
+{
+
+	char strSource[20] = "";
+	sprintf_s(strSource, "%f", sngFloatToCopy);
+	DeepCopy(strSource);
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator=
+// description: Overloads the assignment operator to assign the given int to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator=(const double dblDoubleToCopy)
+{
+
+	char strSource[20] = "";
+	sprintf_s(strSource, "%f", dblDoubleToCopy);
+	DeepCopy(strSource);
+	return *this;
+}
 
 // --------------------------------------------------------------------------------
 // method: operator+=
@@ -368,6 +421,166 @@ CSuperString& CSuperString::operator+=(const CSuperString &ssStringToAppend)
 	return *this;
 }
 
+// --------------------------------------------------------------------------------
+// method: operator+=
+// description: Overloads the concatenation assignment operator to assign the given integer to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator+=(const int& intIntegerToAppend)
+{
+	long lngLength = 0;
+	char* pstrTemp = nullptr;
+	CSuperString ssStringToAppend(intIntegerToAppend);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		lngLength = strlen(m_pstrSuperString);
+	}
+
+	pstrTemp = new char[lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1];
+	pstrTemp[0] = '\0';
+
+	if (m_pstrSuperString != nullptr)
+	{
+		strcpy_s(pstrTemp, lngLength + 1, m_pstrSuperString);
+	}
+	strcat_s(pstrTemp, lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1, ssStringToAppend.m_pstrSuperString);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		CleanUp();
+	}
+	m_pstrSuperString = pstrTemp;
+
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator+=
+// description: Overloads the concatenation assignment operator to assign the given short to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator+=(const short& shtShortToAppend)
+{
+	long lngLength = 0;
+	char* pstrTemp = nullptr;
+	CSuperString ssStringToAppend(shtShortToAppend);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		lngLength = strlen(m_pstrSuperString);
+	}
+
+	pstrTemp = new char[lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1];
+	pstrTemp[0] = '\0';
+
+	if (m_pstrSuperString != nullptr)
+	{
+		strcpy_s(pstrTemp, lngLength + 1, m_pstrSuperString);
+	}
+	strcat_s(pstrTemp, lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1, ssStringToAppend.m_pstrSuperString);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		CleanUp();
+	}
+	m_pstrSuperString = pstrTemp;
+
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator+=
+// description: Overloads the concatenation assignment operator to assign the given long to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator+=(const long& lngLongToAppend)
+{
+	long lngLength = 0;
+	char* pstrTemp = nullptr;
+	CSuperString ssStringToAppend(lngLongToAppend);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		lngLength = strlen(m_pstrSuperString);
+	}
+
+	pstrTemp = new char[lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1];
+	pstrTemp[0] = '\0';
+
+	if (m_pstrSuperString != nullptr)
+	{
+		strcpy_s(pstrTemp, lngLength + 1, m_pstrSuperString);
+	}
+	strcat_s(pstrTemp, lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1, ssStringToAppend.m_pstrSuperString);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		CleanUp();
+	}
+	m_pstrSuperString = pstrTemp;
+
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator+=
+// description: Overloads the concatenation assignment operator to assign the given float to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator+=(const float& fltFloatToAppend)
+{
+	long lngLength = 0;
+	char* pstrTemp = nullptr;
+	CSuperString ssStringToAppend(fltFloatToAppend);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		lngLength = strlen(m_pstrSuperString);
+	}
+
+	pstrTemp = new char[lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1];
+	pstrTemp[0] = '\0';
+
+	if (m_pstrSuperString != nullptr)
+	{
+		strcpy_s(pstrTemp, lngLength + 1, m_pstrSuperString);
+	}
+	strcat_s(pstrTemp, lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1, ssStringToAppend.m_pstrSuperString);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		CleanUp();
+	}
+	m_pstrSuperString = pstrTemp;
+
+	return *this;
+}
+// --------------------------------------------------------------------------------
+// method: operator+=
+// description: Overloads the concatenation assignment operator to assign the given double to the current CSuperString instance.
+// --------------------------------------------------------------------------------
+CSuperString& CSuperString::operator+=(const double& dblDoubleToAppend)
+{
+	long lngLength = 0;
+	char* pstrTemp = nullptr;
+	CSuperString ssStringToAppend(dblDoubleToAppend);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		lngLength = strlen(m_pstrSuperString);
+	}
+
+	pstrTemp = new char[lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1];
+	pstrTemp[0] = '\0';
+
+	if (m_pstrSuperString != nullptr)
+	{
+		strcpy_s(pstrTemp, lngLength + 1, m_pstrSuperString);
+	}
+	strcat_s(pstrTemp, lngLength + strlen(ssStringToAppend.m_pstrSuperString) + 1, ssStringToAppend.m_pstrSuperString);
+
+	if (m_pstrSuperString != nullptr)
+	{
+		CleanUp();
+	}
+	m_pstrSuperString = pstrTemp;
+
+	return *this;
+}
 // --------------------------------------------------------------------------------
 // method: operator+
 // description: Overloads the concatenation operator to concatenate a given CSuperString instance with a given CSuperString instance.
@@ -863,7 +1076,7 @@ CSuperString CSuperString::Insert(const char chrLetterToInsert, long lngIndex)
 		}
 		ssInserted = Left(lngIndex);
 		ssInserted += chrLetterToInsert;
-		ssInserted+= Right(lngIndex);
+		ssInserted += Right(lngLength - lngIndex);
 
 		
 	}

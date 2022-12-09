@@ -1,5 +1,7 @@
 // --------------------------------------------------------------------------------
 // Class: CSuperString 
+// Abstract: Implements string functionality
+// Author: Lance Brown
 // --------------------------------------------------------------------------------
 
 // --------------------------------------------------------------------------------
@@ -51,11 +53,21 @@ public:
 	CSuperString &operator = (const CSuperString &ssStringToCopy);
 	// Extra credit for numeric parameters
 	CSuperString& operator = (const int intIntegerToCopy);
+	CSuperString& operator = (const short shtShortToCopy);
+	CSuperString& operator = (const long lngLongToCopy);
+	CSuperString& operator = (const float sngFloatToCopy);
+	CSuperString& operator = (const double dblDoubleToCopy);
 	// Concatenate operator
 	CSuperString& operator += (const char *pstrStringToAppend);
 	CSuperString& operator += (const char chrCharacterToAppend);
 	CSuperString& operator += (const CSuperString &ssStringToAppend);
 	// Extra credit for numeric parameters
+	CSuperString& operator += (const int& intIntegerToAppend);
+	CSuperString& operator += (const short& shtShortToAppend);
+	CSuperString& operator += (const long& lngLongToAppend);
+	CSuperString& operator += (const float& fltFloatToAppend);
+	CSuperString& operator += (const double& dblDoubleToAppend);
+
 
 	friend CSuperString operator + (const CSuperString &ssLeft,
 		const CSuperString &ssRight);

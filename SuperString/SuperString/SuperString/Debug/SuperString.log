@@ -1,35 +1,32 @@
 ﻿  CSuperString.cpp
-  SuperString.cpp
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\SuperString.cpp(143,7): warning C4101: 'blnResult': unreferenced local variable
-  Generating Code...
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(996): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1014): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1005): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1023): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1041): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1032): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1050): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1059): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1068): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1077): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1086): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1095): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1104): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1122): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1113): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1131): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1140): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1149): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1158): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1167): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1176): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1185): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1194): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1203): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1212): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1221): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1230): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1248): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1239): warning C4172: returning address of local variable or temporary: blnReturn
-C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1257): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1218): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1209): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1227): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1236): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1245): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1254): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1263): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1272): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1281): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1299): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1290): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1308): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1317): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1326): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1335): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1353): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1362): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1344): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1371): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1389): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1380): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1398): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1416): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1407): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1425): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1434): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1443): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1452): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1461): warning C4172: returning address of local variable or temporary: blnReturn
+C:\Users\lance\code\c2\SuperString\SuperString\SuperString\CSuperString.cpp(1470): warning C4172: returning address of local variable or temporary: blnReturn
   SuperString.vcxproj -> C:\Users\lance\code\c2\SuperString\SuperString\Debug\SuperString.exe

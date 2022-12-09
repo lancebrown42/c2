@@ -50,7 +50,7 @@ public:
 	CSuperString &operator = (const char chrLetterToCopy);
 	CSuperString &operator = (const CSuperString &ssStringToCopy);
 	// Extra credit for numeric parameters
-
+	CSuperString& operator = (const int intIntegerToCopy);
 	// Concatenate operator
 	CSuperString& operator += (const char *pstrStringToAppend);
 	CSuperString& operator += (const char chrCharacterToAppend);
@@ -87,7 +87,7 @@ public:
 	CSuperString Right(long lngCharactersToCopy);
 	CSuperString Substring(long lngStart, long lngSubStringLength);
 
-	const char* Replace(char chrLetterToFind, char chrReplace);
+	CSuperString Replace(char chrLetterToFind, char chrReplace);
 	// Hard
 	CSuperString Replace(const char *pstrFind, const char* pstrReplace);
 	CSuperString Insert(const char chrLetterToInsert, long lngIndex);

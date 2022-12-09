@@ -32,7 +32,8 @@ void TestConstructors()
 	ssTest4.Print("bool");
 	CSuperString ssTest5((short) 32767);
 	ssTest5.Print("short");
-	CSuperString ssTest6((int) 32767);
+	int intTest = 32767;
+	CSuperString ssTest6(intTest);
 	ssTest6.Print("int");
 	CSuperString ssTest7((long) 32767);
 	ssTest7.Print("long");
@@ -40,10 +41,7 @@ void TestConstructors()
 	ssTest8.Print("float");
 	CSuperString ssTest9((double) 32767);
 	ssTest9.Print("double");
-	ssTest2 = ssTest2.ToUpperCase();
-	ssTest2.Print("To upper");
-	ssTest2 = ssTest2.Reverse();
-	ssTest2.Print("Reverse");
+
 	
 }
 
@@ -53,15 +51,23 @@ void TestMutators()
 	cout << "****************" << endl << pstrTestName << endl << "****************" << endl << endl;
 
 	CSuperString ssTest("I Love Star Wars and I Love Star Trek");
+	CSuperString ssTest2;
 	ssTest.Print("Initial string");
-	ssTest = ssTest.Replace('r', 'l');
-	ssTest.Print("Replace char");
-	ssTest = ssTest.Replace("Love", "Really Love Love");
-	ssTest.Print("Replace string");
-	ssTest = ssTest.Substring(3, 15);
-	ssTest.Print("Substring 3, 15");
-	ssTest = ssTest.Insert("|||||", 6);
-	ssTest.Print("Insert '|||||'");
+	ssTest2 = ssTest.ToUpperCase();
+	ssTest2.Print("To upper");
+	ssTest2 = ssTest.ToLowerCase();
+	ssTest2.Print("ToLower");
+	ssTest2 = ssTest.Reverse();
+	ssTest2.Print("Reverse");
+	ssTest2 = ssTest.Replace('r', 'l');
+	ssTest2.Print("Replace char");
+	ssTest2 = ssTest.Replace("Love", "Really Love Love");
+	ssTest2.Print("Replace string");
+	ssTest2 = ssTest.Substring(3, 15);
+	ssTest2.Print("Substring 3, 15");
+	ssTest2 = ssTest.Insert("|||||", 6);
+	ssTest2.Print("Insert '|||||'");
+	ssTest.Print("Initial string unaffected");
 
 }
 void TestAssignmentOperators() {
@@ -122,7 +128,7 @@ void TestIO() {
 	cout << "Type stuff: ";
 	cin >> ssBuffer;
 	cout << ssBuffer << endl;
-	printf("Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
+	printf("Double call:\n Left( 2 ): %s, Left( 4 ): %s\n", ssBuffer.Left(2).ToString(), ssBuffer.Left(4).ToString());
 
 }
 void TestComparison() {
@@ -224,14 +230,14 @@ void TestComparison() {
 int main()
 {
     std::cout << "Hello World!\n";
-	//TestConstructors();
-	//TestMutators();
-	//TestAssignmentOperators();
+	TestConstructors();
+	TestMutators();
+	TestAssignmentOperators();
 	//TestComparison();
 	TestIndices();
-	//TestIO();
-	//MuahahahTest1();
-	//MuahahahTest2();
+	TestIO();
+	MuahahahTest1();
+	MuahahahTest2();
 }
 
 
